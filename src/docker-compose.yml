@@ -3,4 +3,4 @@ services:
   redis:
     image: redis
     volumes:
-      - ./databases/redis:/data
+      - ./server/databases/redis:/data
