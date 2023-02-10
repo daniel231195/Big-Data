@@ -1,19 +1,19 @@
 let mongoose = require("mongoose");
 
-let pizzaSchema = new mongoose.Schema(
+let orderModel = new mongoose.Schema(
   {
-    order_id: Number,
-    branch_id: String,
-    branch_name: String,
-    district: String,
-    order_status: String,
-    order_date: Date,
-    order_time: String,
-    order_served_time: Date,
-    topping: Array,
-    branch_open: Date,
-    branch_close: Date,
-    topic: String,
+    order_id: { type: Number, required: true },
+    branch_id: { type: Number, required: true },
+    branch_name: { type: String, required: true },
+    district: { type: String, required: true },
+    order_status: { type: String, required: true },
+    order_date: { type: String, required: true },
+    order_time: { type: String, required: true },
+    order_served_time: { type: String, required: false },
+    topping: { type: [String], required: false, default: [] },
+    branch_open: { type: String, required: true },
+    branch_close: { type: String, required: true },
+    topic: { type: String, required: true },
   },
   {
     WriteConcern: {
@@ -24,4 +24,4 @@ let pizzaSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Order", pizzaSchema);
+module.exports = mongoose.model("Order", orderModel);
