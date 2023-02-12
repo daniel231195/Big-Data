@@ -50,6 +50,7 @@ consumer.on("data", function (data) {
     pizzaOrder
       .save()
       .then((doc) => {
+        console.log("************************ Upload To Mongo ****************************************")
         console.log(doc);
       })
       .catch((err) => {

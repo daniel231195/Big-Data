@@ -10,11 +10,12 @@ let orderModel = new mongoose.Schema(
     order_date: { type: String, required: true },
     order_time: { type: String, required: true },
     order_served_time: { type: String, required: false },
-    topping: { type: [String], required: false, default: [] },
+    toppings: { type: [String], required: false },
     branch_open: { type: String, required: true },
     branch_close: { type: String, required: true },
     topic: { type: String, required: true },
   },
+
   {
     WriteConcern: {
       w: "majority",
