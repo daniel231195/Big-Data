@@ -17,9 +17,14 @@ function reverse(s) {
 function addToping() {
   let topping = [];
   let toppingAmount = Math.floor(Math.random() * 5); // 0-4 topping for each pizza
-  for (let index = 0; index < toppingAmount; index++) {
+  let i = 0;
+  while (topping.length < toppingAmount) {
     let randomIndexToppings = Math.floor(Math.random() * pizzaToppings.length);
-    topping.push(reverse(pizzaToppings[randomIndexToppings]));
+    const newTopping = pizzaInformation.pizzaTopping[randomIndexToppings];
+    if (topping.indexOf(newTopping) == -1) {
+      topping.push(reverse(newTopping));
+      i++;
+    }
   }
   return topping;
 }
@@ -54,7 +59,7 @@ function generateOrder() {
     order_date: formatDate(new Date(), "dd/mm/yyyy"),
     order_time: currentHour(),
     order_served_time: "",
-    topping: addToping(),
+    toppings: addToping(),
     branch_open: openingTime[randomOpeningBranches],
     branch_close: closingTime[randomClosedBranches],
     topic: "order",
