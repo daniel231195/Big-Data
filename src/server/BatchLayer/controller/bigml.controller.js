@@ -37,7 +37,7 @@ const makeJsonFile = async (req, res) => {
                 order_date: call.order_date,
                 order_time: call.order_time,
                 order_served_time: call.order_served_time,
-                topping: call.topping,
+                toppings: call.toppings,
                 branch_open: call.branch_open,
                 branch_close: call.branch_close,
                 topic: call.topic,

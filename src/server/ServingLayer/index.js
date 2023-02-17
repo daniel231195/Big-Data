@@ -14,14 +14,17 @@ const controller = require('./controller/controller')
 
 /**
  * All Middlewares
- * /
-
+ */
+ app.use(express.json());
+ // app.use(cors());
 
 
  /**
  * All Routes
- * /
-
+ */
+ // app
+ //     .get("/", (req, res) => res.send("Hello World!"))
+ //     .get("/dashboard/", mongoController.getAllOrder)
 
 /**
  * Start Server on port 3001
