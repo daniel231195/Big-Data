@@ -40,7 +40,6 @@ module.exports.publish = function (msg) {
     return -1;
   }
   m = JSON.stringify(msg);
-  console.log(m);
   producer.produce(orderTopic, -1, genMessage(m), uuid.v4());
   //producer.disconnect();
 
@@ -49,6 +48,5 @@ module.exports.publish = function (msg) {
 };
 module.exports.delivered = function (msg) {
   m = JSON.stringify(msg);
-  console.log(m);
   producer.produce(deliveredTopic, -1, genMessage(m), uuid.v4());
 };

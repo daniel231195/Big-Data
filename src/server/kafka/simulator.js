@@ -17,9 +17,14 @@ function reverse(s) {
 function addToping() {
   let topping = [];
   let toppingAmount = Math.floor(Math.random() * 5); // 0-4 topping for each pizza
-  for (let index = 0; index < toppingAmount; index++) {
+  let i = 0;
+  while (topping.length < toppingAmount) {
     let randomIndexToppings = Math.floor(Math.random() * pizzaToppings.length);
-    topping.push(reverse(pizzaToppings[randomIndexToppings]));
+    const newTopping = pizzaInformation.pizzaTopping[randomIndexToppings];
+    if (topping.indexOf(newTopping) == -1) {
+      topping.push(reverse(newTopping));
+      i++;
+    }
   }
   return topping;
 }
@@ -54,7 +59,7 @@ function generateOrder() {
     order_date: formatDate(new Date(), "dd/mm/yyyy"),
     order_time: currentHour(),
     order_served_time: "",
-    topping: addToping(),
+    toppings: addToping(),
     branch_open: openingTime[randomOpeningBranches],
     branch_close: closingTime[randomClosedBranches],
     topic: "order",
@@ -62,10 +67,17 @@ function generateOrder() {
 }
 
 const setRandomInterval = (intervalFunction, minDelay, maxDelay) => {
+  console.log(
+    "************************************************************************************************" +
+      "******************************** SIMULATOR STARTING ********************************************" +
+      "**********************************************************************************************************************"
+  );
+  console.log("");
   let timeout;
-
   const runInterval = () => {
-    console.log("Run Interval Started");
+    console.log(
+      "******************************* ORDER PRODUCED ************************************************"
+    );
     const timeoutFunction = () => {
       intervalFunction();
       runInterval();
@@ -87,9 +99,9 @@ const setRandomInterval = (intervalFunction, minDelay, maxDelay) => {
 };
 
 function orderDelivered(orderPool) {
-  console.log("OrderPool length: " + orderPool.length);
   let randomDeliveredSeed = Math.floor(Math.random() * orderPool.length);
   orderId = orderPool[randomDeliveredSeed];
+  orderPool.splice(randomDeliveredSeed, 1);
   return {
     order_id: orderId,
     served_time: currentHour(),
@@ -98,16 +110,26 @@ function orderDelivered(orderPool) {
 }
 let i = 0;
 maxDeliveredTime = 3;
+let index = 0;
 let orderPool = [];
 let timeToDeliver = Math.floor(Math.random() * maxDeliveredTime) + 5;
 function intervalFunction() {
-  console.log("Started Interval Function");
   let order = generateOrder();
   orderPool.push(order.order_id);
   if (i > timeToDeliver) {
-    let delivered = orderDelivered(orderPool);
-    producer.delivered(delivered);
+    let deliveredAmount = Math.floor(Math.random() * orderPool.length);
+    index = 0;
+    while (orderPool.length != 0 && index < deliveredAmount) {
+      console.log(
+        "******************************* ORDER DELIVERED ************************************************"
+      );
+      let delivered = orderDelivered(orderPool);
+      console.log(delivered);
+      producer.delivered(delivered);
+      index++;
+    }
     timeToDeliver = Math.floor(Math.random() * maxDeliveredTime) + 5;
+    index = 0;
     i = 0;
   }
   orderCount++;

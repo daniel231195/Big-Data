@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "err": "^2.1.12",
+    "i": "^0.3.7",
+    "mongodb": "^5.0.0",
+    "mongoose": "^6.9.1",
+    "node-rdkafka": "^2.15.0"
+  }
+}
