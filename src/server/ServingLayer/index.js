@@ -4,7 +4,9 @@
 const http = require('http');
 const express = require('express');
 const app = express();
-const controller = require('./controller/controller')
+const cors = require("cors");
+const batchController = require("./controller/batch.controller");
+const streamController = require("./controller/stream.controller");
 
 
 /**
@@ -16,15 +18,18 @@ const controller = require('./controller/controller')
  * All Middlewares
  */
  app.use(express.json());
- // app.use(cors());
+ app.use(cors());
 
 
  /**
  * All Routes
  */
- // app
- //     .get("/", (req, res) => res.send("Hello World!"))
- //     .get("/dashboard/", mongoController.getAllOrder)
+ app
+     .get("/", (req, res) => res.send("Hello World!"))
+     .get("/batch/getModelInfo", batchController.getModelInfo)
+     .get("/batch/getDataSetInfo", batchController.getDataSet)
+ ;
+ //     .get("/stream", )
 
 /**
  * Start Server on port 3001
