@@ -4,8 +4,6 @@ require("dotenv").config();
 
 const pizzaBranches = pizzaInformation.pizzaBranches;
 const pizzaToppings = pizzaInformation.pizzaTopping;
-const openingTime = pizzaInformation.openingTime;
-const closingTime = pizzaInformation.closingTime;
 
 let orderCount = 1;
 
@@ -20,7 +18,7 @@ function addToping() {
   while (topping.length < toppingAmount) {
     let randomIndexToppings = Math.floor(Math.random() * pizzaToppings.length);
     const newTopping = pizzaInformation.pizzaTopping[randomIndexToppings];
-    if (topping.indexOf(newTopping) == -1) {
+    if (topping.indexOf(reverse(newTopping)) == -1) {
       topping.push(reverse(newTopping));
       i++;
     }
@@ -47,8 +45,6 @@ function formatDate(date, format) {
 
 function generateOrder() {
   let randomIndexBranches = Math.floor(Math.random() * pizzaBranches.length);
-  let randomOpeningBranches = Math.floor(Math.random() * openingTime.length);
-  let randomClosedBranches = Math.floor(Math.random() * closingTime.length);
   return {
     order_id: orderCount,
     branch_id: pizzaBranches[randomIndexBranches].branch_id,
@@ -59,8 +55,8 @@ function generateOrder() {
     order_time: currentHour(),
     order_served_time: "",
     toppings: addToping(),
-    branch_open: openingTime[randomOpeningBranches],
-    branch_close: closingTime[randomClosedBranches],
+    branch_open: pizzaBranches[randomIndexBranches].openTime,
+    branch_close: pizzaBranches[randomIndexBranches].closeTime,
     topic: "order",
   };
 }
