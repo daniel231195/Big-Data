@@ -9,13 +9,13 @@ function App() {
   return (
     <AppWrapper>
       <SideNavbar />
-      <div className="container">
+      <AppBody className="container">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/analyze" element={<Analyze />} />
           <Route path="/search" element={<Search />} />
         </Routes>
-      </div>
+      </AppBody>
     </AppWrapper>
   );
 }
@@ -24,6 +24,11 @@ export const AppWrapper = styled.div`
   display: flex;
   background: #3c445a;
   height: 100vh;
+`;
+
+const AppBody = styled.div`
+  display: flex;
+  width: 100%;
 `;
 
 export default App;
