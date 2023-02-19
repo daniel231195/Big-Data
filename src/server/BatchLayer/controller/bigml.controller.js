@@ -8,7 +8,7 @@ const client = new MongoClient(process.env.DB_CONNECT);
 const dbName = "Pizza",
     collectionName = "orders";
 
-const connection = new bigml.BigML(process.env.ML_USER,process.env.ML_APIKEY);
+const connection = new bigml.BigML(process.env.ML_USER , process.env.ML_APIKEY);
 const source = new bigml.Source(connection);
 let modelInfo = {};
 let dataInfo = {};
@@ -18,7 +18,6 @@ let dataInfo = {};
  */
 const makeJsonFile = async (req, res) => {
     try {
-        // const allCalls = await axios.get(`http://localhost:3003/api/calls`);
         await client.connect();
         const all = await client
             .db(dbName)
@@ -37,15 +36,15 @@ const makeJsonFile = async (req, res) => {
                 order_date: call.order_date,
                 order_time: call.order_time,
                 order_served_time: call.order_served_time,
-                topping: call.topping,
+                // toppings: call.toppings,
                 branch_open: call.branch_open,
                 branch_close: call.branch_close,
                 topic: call.topic,
             }
         });
-        await jsonfile.writeFile("./orderData.json", calls, { spaces: 2 });
+        await jsonfile.writeFile("./orderData.json", calls, {spaces: 2});
         res.status(200).json({
-            message:"successes make json file"
+            message: "successes make json file"
         })
         // return new Promise((resolve, reject) => {
         //     resolve(true);
@@ -62,10 +61,10 @@ const buildModel = async (req, res) => {
     // await makeJsonFile();
     source.create("./orderData.json", function (error, sourceInfo) {
         if (!error && sourceInfo) {
-            var dataset = new bigml.Dataset();
+            var dataset = new bigml.Dataset(connection);
             dataset.create(sourceInfo, function (error, datasetInfo) {
                 if (!error && datasetInfo) {
-                    var model = new bigml.Model();
+                    var model = new bigml.Model(connection);
                     model.create(datasetInfo, function (error, model) {
                         if (!error && model) {
                             console.log(model);
@@ -96,10 +95,10 @@ const createAssociation = (req, res) => {
     console.log("modelInfo", modelInfo);
     console.log("createAssociation", req.body);
     const orderToAsso = req.body;
-    const association = new bigml.Association();
+    const association = new bigml.Association(connection);
     association.create(
         dataInfo,
-        // { antecedent: "branch_name", consequent: "district" },
+        // { antecedent: "toppings", consequent: "toppings" },
         function (error, associationInfo) {
             if (!error && associationInfo) {
                 res.status(200).json({
