@@ -1,11 +1,11 @@
-const mongo = require("../model/PizzaOrder");
+const mongo = require("../model/Order");
 const MongoClient = require("mongodb").MongoClient;
 require("dotenv").config();
 
 const client = new MongoClient(process.env.DB_CONNECT);
 
 const dbName = "test",
-  collectionName = "pizzaOrders";
+  collectionName = "orders";
 
 /**
  * @description Inserts a new order to the database
