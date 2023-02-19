@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SideNavbarContainer = styled.nav`
   display: flex;
-  width: 250px;
+  width: 300px;
   justify-content: center;
   align-items: center;
   background: rgb(17, 24, 39);
