@@ -1,6 +1,6 @@
 const Kafka = require("node-rdkafka");
 const kafkaConf = require("../config/kafka.config");
-require("dotenv").config();
+
 
 const orderTopic = process.env.KAFKA_ORDER_TOPIC;
 const deliveredTopic = process.env.KAFKA_DELIVERED_TOPIC;
@@ -8,7 +8,7 @@ const consumer = new Kafka.KafkaConsumer(kafkaConf);
 
 consumer
   .on("ready", function () {
-    console.log("Consumer ready");
+    console.log("Elastic Consumer ready");
     consumer.subscribe([orderTopic, deliveredTopic]);
     consumer.consume();
   })
