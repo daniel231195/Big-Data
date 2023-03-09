@@ -34,20 +34,20 @@ app
 //     .get("/stream", )
 /**
  * @deletion method for deleting specific topics from elasticsearch host.
- * example: http://localhost:3000/es/<existing topic>
+ * example: http://localhost:3001/es/<existing topic>
  * @param {indexName}
  */
 app
   .delete("/es/:indexName", elasticController.deleteIndex)
   /**
    * @GET method for searching particular an order ID from particular index using routs
-   * example: http://localhost:3000/search/<EXISTING-INDEX>/<EXISITNG-ID>
+   * example: http://localhost:3001/search/<EXISTING-INDEX>/<EXISITNG-ID>
    */
   .get("/es/:indexName/:id", elasticController.searchIndexId)
   .get("/es/all", elasticController.searchAll)
   /**
    * @GET method use to search for records from particular branch and in particular date.
-   * Example for a request localhost:3000/es/<branch_id>/<day>/<month>/<year>
+   * Example for a request localhost:3001/es/<branch_id>/<day>/<month>/<year>
    * Return valid records from this dates and branch
    */
   .get(
