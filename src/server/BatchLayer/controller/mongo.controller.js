@@ -55,6 +55,7 @@ const deleteAllOrders = async (req, res) => {
     client.close();
   } catch (error) {
     console.log(error);
+    return res.json({ message: error.message });
   }
 };
 
