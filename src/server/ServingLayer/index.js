@@ -38,7 +38,7 @@ app
  * @param {indexName}
  */
 app
-  .delete("/es/:indexName", elasticController.deleteIndex)
+  .delete("/es/delete/:indexName", elasticController.deleteIndex)
   /**
    * @GET method for searching particular an order ID from particular index using routs
    * example: http://localhost:3001/search/<EXISTING-INDEX>/<EXISITNG-ID>
@@ -110,11 +110,11 @@ kafkaConsumer.on("data", async function (data) {
   }
 });
 /**
- * Start Server on port 3001
+ * Start Server on port 3002
  * @type {string|number}
  */
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 const server = http.createServer(app);
 
-server.listen(port, () => console.log("server run on port %d", port));
+server.listen(port, () => console.log("Serving Layer started at http://localhost:%d", port));

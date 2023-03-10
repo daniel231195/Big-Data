@@ -715,7 +715,7 @@ const pizzaBranches = [
   },
 ];
 
-const pizzaIdBranches = {
+const pizzaMapId = {
   "אום אל פאחם": "1",
   אופקים: "2",
   "אור עקיבא": "3",
@@ -847,5 +847,5 @@ const pizzaTopping = [
 module.exports = {
   pizzaTopping,
   pizzaBranches,
-  pizzaIdBranches,
+  pizzaMapId,
 };

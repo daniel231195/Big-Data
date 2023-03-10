@@ -6,7 +6,6 @@ require("dotenv").config();
 const orderTopic = process.env.KAFKA_ORDER_TOPIC;
 const deliveredTopic = process.env.KAFKA_DELIVERED_TOPIC;
 
-console.log(orderTopic);
 const producer = new Kafka.Producer(kafkaConf);
 
 const genMessage = (m) => {
