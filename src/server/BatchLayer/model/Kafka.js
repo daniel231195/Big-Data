@@ -8,7 +8,7 @@ const consumer = new Kafka.KafkaConsumer(kafkaConf);
 
 consumer
   .on("ready", function () {
-    console.log("Consumer ready");
+    console.log("Mongo Consumer ready");
     consumer.subscribe([orderTopic, deliveredTopic]);
     consumer.consume();
   })
