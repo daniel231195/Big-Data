@@ -62,7 +62,7 @@ function generateOrder() {
 }
 
 function orderDelivered(orderPool) {
-  let randomDeliveredSeed = Math.floor(Math.random() * orderPool.length);
+  let randomDeliveredSeed = Math.floor(Math.random() * (orderPool.length - 3));
   orderId = orderPool[randomDeliveredSeed];
   orderPool.splice(randomDeliveredSeed, 1);
   return {
@@ -72,7 +72,7 @@ function orderDelivered(orderPool) {
   };
 }
 let i = 0;
-maxDeliveredTime = 3;
+maxDeliveredTime = 10;
 let index = 0;
 let orderPool = [];
 let timeToDeliver = Math.floor(Math.random() * maxDeliveredTime) + 5;
@@ -83,7 +83,7 @@ function intervalFunction() {
   if (i > timeToDeliver) {
     let deliveredAmount = Math.floor(Math.random() * orderPool.length);
     index = 0;
-    while (orderPool.length != 0 && index < deliveredAmount) {
+    while (orderPool.length > 10 && index < deliveredAmount) {
       console.log(
         "******************************* ORDER DELIVERED ************************************************"
       );
@@ -97,7 +97,7 @@ function intervalFunction() {
     i = 0;
   }
   orderCount++;
-  console.log("Inserted order: ", order);
+  console.log("Inserted order: ", order.order_id);
   producer.publish(order);
   i++;
 }

@@ -16,7 +16,7 @@ const app = express();
 
 /* Middlewares */
 app.use(express.json());
-app.use(cors());
+app.use(cors()); 
 
 /* Routes */
 app
@@ -54,7 +54,7 @@ kafkaConsumer.on("data", function (data) {
         console.log(
           "************************ Upload To Mongo ****************************************"
         );
-        console.log(doc);
+        console.log(`Order with id ${message.order_id} has been uploaded.`);
       })
       .catch((err) => {
         console.log(err);
