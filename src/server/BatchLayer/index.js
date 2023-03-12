@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-require("dotenv").config({ path: `${__dirname}/../../../.env` });
+require("dotenv") .config({ path: `${__dirname}/../../../.env` });
 require("./model/database"); // for connection configurations to mongodb
 
 const kafkaConsumer = require("./model/Kafka");
@@ -28,6 +28,7 @@ app
   .get("/api/buildModel", bigmlController.buildModel)
   .get("/api/modelInfo", bigmlController.getModelInfo)
   .get("/api/datasetInfo", bigmlController.getDataSetlInfo)
+  .get("/api/associationlInfo", bigmlController.getAssociationlInfo)
   .post("/api/associationOrder", bigmlController.createAssociation);
 
 async function markOrderAsReady(orderId, servedTime) {
