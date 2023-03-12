@@ -1,5 +1,5 @@
 const kafkaConf = {
-  "group.id": "fflvkrwz-group2",
+  "group.id": process.env.GROUP_ID_MONGO,
   "metadata.broker.list": process.env.CLOUDKARAFKA_BROKERS.split(","),
   "socket.keepalive.enable": true,
   "security.protocol": "SASL_SSL",

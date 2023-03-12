@@ -5,7 +5,18 @@ require("dotenv").config();
 const pizzaBranches = pizzaInformation.pizzaBranches;
 const pizzaToppings = pizzaInformation.pizzaTopping;
 
-let orderCount = 1;
+let minTime;
+let maxTime;
+
+let generateOrders = true;
+
+
+function stopGeneratingOrders() {
+  generateOrders = false;
+}
+function startGeneratingOrders() {
+  generateOrders = true;
+}
 
 function reverse(s) {
   return [...s].reverse().join("");
@@ -43,7 +54,7 @@ function formatDate(date, format) {
   return format.replace(/mm|dd|yyyy/gi, (matched) => map[matched]);
 }
 
-function generateOrder() {
+function generateOrder(orderCount) {
   let randomIndexBranches = Math.floor(Math.random() * pizzaBranches.length);
   return {
     order_id: orderCount,
@@ -60,7 +71,15 @@ function generateOrder() {
     topic: "order",
   };
 }
-
+function orderDelivered2(orderId) {
+  const delivered = {
+    order_id: orderId,
+    served_time: currentHour(),
+    topic: "delivered",
+  };
+  console.log(delivered);
+  producer.delivered(delivered);
+}
 function orderDelivered(orderPool) {
   let randomDeliveredSeed = Math.floor(Math.random() * (orderPool.length - 3));
   orderId = orderPool[randomDeliveredSeed];
@@ -78,7 +97,7 @@ let orderPool = [];
 let timeToDeliver = Math.floor(Math.random() * maxDeliveredTime) + 5;
 
 function intervalFunction() {
-  let order = generateOrder();
+  let order = generateOrder(i);
   orderPool.push(order.order_id);
   if (i > timeToDeliver) {
     let deliveredAmount = Math.floor(Math.random() * orderPool.length);
@@ -96,13 +115,39 @@ function intervalFunction() {
     index = 0;
     i = 0;
   }
-  orderCount++;
+  // orderCount++;
   console.log("Inserted order: ", order.order_id);
   producer.publish(order);
   i++;
+}
+function generateRandomTime(min, max) {
+  minTime = min * 60 * 1000; // 5 minutes in milliseconds
+  maxTime = max * 60 * 1000; // 50 minutes in milliseconds
+  return Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+}
+
+function intervalFunction2(i, callback) {
+  let order = null;
+  let deliveryDelay = maxTime;
+  if (generateOrders === true) {
+    order = generateOrder(i);
+    console.log(`Order ${order.order_id} is being prepared`);
+    producer.publish(order);
+    deliveryDelay = generateRandomTime(5, 50); // random delay between 5 to 50 minutes in milliseconds
+  }
+  setTimeout(() => {
+    if (order !== null) {
+      console.log(`Order ${order.order_id} has been delivered`);
+      callback(order.order_id);
+    }
+  }, deliveryDelay);
 }
 
 module.exports = {
   generateOrder,
   intervalFunction,
+  intervalFunction2,
+  orderDelivered2,
+  startGeneratingOrders,
+  stopGeneratingOrders,
 };
