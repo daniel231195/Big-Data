@@ -13,6 +13,12 @@ const elasticController = require("./controller/elastic.controller");
 const kafkaConsumer = require("./model/Kafka");
 const client = require("./model/connect");
 
+const elasticClient = client.elasticClient;
+const redisClient = client.redisClient;
+const port = process.env.PORT || 3002;
+
+const server = http.createServer(app);
+
 /**
  * Connection
  */
@@ -55,25 +61,39 @@ app
     elasticController.searchBranchIdDate
   );
 
-kafkaConsumer.on("data", async function (data) {
+
+function packOrder(message) {
+  const order = {
+    order_id: message.order_id,
+    branch_id: message.branch_id,
+    branch_name: message.branch_name,
+    district: message.district,
+    order_status: message.order_status,
+    order_date: message.order_date,
+    order_time: message.order_time,
+    order_served_time: message.order_served_time,
+    toppings: message.toppings,
+    branch_open: message.branch_open,
+    branch_close: message.branch_close,
+    topic: message.topic,
+  };
+  return order;
+}
+kafkaConsumer.redisConsumer.on("data", async function (data) {
   const message = JSON.parse(data.value.toString());
   if (message.topic === "order") {
-    const order = {
-      order_id: message.order_id,
-      branch_id: message.branch_id,
-      branch_name: message.branch_name,
-      district: message.district,
-      order_status: message.order_status,
-      order_date: message.order_date,
-      order_time: message.order_time,
-      order_served_time: message.order_served_time,
-      toppings: message.toppings,
-      branch_open: message.branch_open,
-      branch_close: message.branch_close,
-      topic: message.topic,
-    };
+    const order = packOrder(message);
+    let order_data = await redisClient.redis.json.GET("order_data")
+    order_data =  processData()
+  }
+});
+
+kafkaConsumer.elasticConsumer.on("data", async function (data) {
+  const message = JSON.parse(data.value.toString());
+  if (message.topic === "order") {
+    const order = packOrder(message);
     try {
-      await client.index({
+      await elasticClient.index({
         index: "order",
         id: message.order_id.toString(),
         body: {
@@ -89,7 +109,7 @@ kafkaConsumer.on("data", async function (data) {
   }
   if (message.topic === "delivered") {
     try {
-      const body = await client.update({
+      const body = await elasticClient.update({
         index: "order",
         id: message.order_id,
         body: {
@@ -111,10 +131,9 @@ kafkaConsumer.on("data", async function (data) {
 });
 /**
  * Start Server on port 3002
- * @type {string|number}
  */
-const port = process.env.PORT || 3002;
 
-const server = http.createServer(app);
 
-server.listen(port, () => console.log("Serving Layer started at http://localhost:%d", port));
+server.listen(port, () =>
+  console.log("Serving Layer started at http://localhost:%d", port)
+);

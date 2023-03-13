@@ -18,8 +18,22 @@ services:
       - "kibana_data:/bitnami/kibana"
     depends_on:
       - elasticsearch
+
+  redis:
+    image: docker.io/bitnami/redis:7.0
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redis_data:/bitnami/redis/data"
+
 volumes:
   elasticsearch_data:
     driver: local
   kibana_data:
+    driver: local
+  redis_data:
     driver: local
