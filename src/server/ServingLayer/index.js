@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 const batchController = require("./controller/batch.controller");
 const streamController = require("./controller/stream.controller");
 const elasticController = require("./controller/elastic.controller");
-const kafkaConsumer = require("./model/Kafka");
+// const kafkaConsumer = require("./model/Kafka");
 const client = require("./model/connect");
 
 const elasticClient = client.elasticClient;
@@ -35,8 +35,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
  */
 app
   .get("/", (req, res) => res.send("Hello World!"))
-  .get("/batch/getModelInfo", batchController.getModelInfo)
-  .get("/batch/getDataSetInfo", batchController.getDataSet);
+  .get("/batch/getAssociation", batchController.getAssociation);
 //     .get("/stream", )
 /**
  * @deletion method for deleting specific topics from elasticsearch host.

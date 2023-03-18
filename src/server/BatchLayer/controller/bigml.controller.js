@@ -16,71 +16,69 @@ let associationInfo = {};
 /**
  * @description Builds data in json file
  */
-const makeJsonFile = async (req, res) => {
+// const pizzaTopping = {
+//     "עגבניה": "tomato",
+//     "אקסטרה גבינה": "extra_cheese",
+//     "גבינה כחולה":"blue_cheese",
+//     "פפרוני": "pepperoni",
+//     "פטריות": "mushrooms",
+//     "זיתים שחורים": "black_olives",
+//     "פלפל חריף" : "hot_pepper" ,
+//     "אננס" : "pineapple",
+//     "חלפיניוס" : "chalfinius",
+//     "בייקון" : "bacon",
+//     "בשר בקר טחון" : "ground_beef" ,
+//     "זיתים ירוקים" : "green_olives" ,
+//     "תירס" : "corn" ,
+//     "בצל" :"onion"  ,
+//     "שום" : "garlic",
+//     "עוף" : "chicken",
+//     "תרד" : "spinach" ,
+//     "גבינת פטה" :"feta_cheese" ,
+//     "אנשובי" : "anchovy",
+//     "לבבות ארטישוק" : "artichoke_hearts",
+// };
+const pizzaTopping = {
+    "עגבניה": "tomato",
+    "תירס":"corn",
+    "בצל": "onion",
+    "פטריות": "mushrooms",
+    "זיתים": "olives",
+};
+
+const makeCSVFile = async (req, res) => {
     try {
         await client.connect();
         const all = await client
             .db(dbName)
             .collection(collectionName)
             .find()
-            .limit(100)
+            .limit(1000)
             .toArray();
         client.close();
-        // const calls = all.map((call) => {
-        //     // map toppings to multiple objects
-        //     const toppingsArr = call.toppings.map((topping) => {
-        //         return {
-        //             topping: topping,
-        //         };
-        //     });
-        //
-        //     // merge toppingsArr and call into a single object
-        //     const callWithToppings = Object.assign({}, call, { toppings: toppingsArr });
-        //
-        //     return callWithToppings;
-        // });
+        let toping = all?.map((all)=> all.toppings)
+        let arr = toping?.map((x) => x?.map((i) => pizzaTopping[i.split("").reverse().join("")]));
+        let data = ""
+        arr?.forEach((i) => (data += i.join(",") + "\n"))
+        toping?.forEach((i) => (data += i.join(",") + "\n"))
+        const fs = require('fs');
+        try {
+            // fs.writeFileSync('orderData.csv',data);
+            // console.log('CSV file has been created successfully.');
+            return new Promise((resolve, reject) => {
+                resolve(true);
+                res.status(200).json({
+                    message: "successes make CSV file"
+                })
+            });
+        }
+        catch (err) {
+            console.error(err);
+        }
 
-        const calls = all.map((call) => {
-            return {
-                order_id: call.order_id,
-                branch_id: call.branch_id,
-                branch_name: call.branch_name,
-                district: call.district,
-                order_status: call.order_status,
-                order_date: call.order_date,
-                order_time: call.order_time,
-                order_served_time: call.order_served_time,
-                // toppings: call.toppings,
-                branch_open: call.branch_open,
-                branch_close: call.branch_close,
-                topic: call.topic,
-            }
-        });
-
-        // const fields = ["order_id","branch_id","branch_name","district","order_status","order_date","order_time","order_served_time","toppings","branch_open","branch_close","topic"];
-        // const opts = { fields };
-        // const fs = require('fs');
-        // const json2csv = require('json2csv').parse;
-        // try {
-        //     const csv = json2csv(calls, opts);
-        //     fs.writeFileSync('output.csv', csv, 'utf-8');
-        //     console.log('CSV file has been created successfully.');
-        // } catch (err) {
-        //     console.error(err);
-        // }
-        await jsonfile.writeFile("./orderData.json", calls, {spaces: 2});
-        // res.status(200).json({
-        //     message: "successes make json file"
-        // })
-        return new Promise((resolve, reject) => {
-            resolve(true);
-            res.status(200).json({
-                message: "successes make json file"
-            })
-        });
     } catch (error) {
         console.log(error);
-    }
+     }
 };
 
 /**
@@ -88,12 +86,12 @@ const makeJsonFile = async (req, res) => {
  */
 const buildModel = async (req, res) => {
     try {
-        await makeJsonFile();
+        await makeCSVFile();
     } catch (err) {
-        console.log("cannot make json file ")
+        console.log("cannot make csv file ")
         console.log(error);
     }
-    source.create("./orderData.json", function (error, sourceInfo) {
+    source.create("./orderData.csv", function (error, sourceInfo) {
         if (!error && sourceInfo) {
             var dataset = new bigml.Dataset(connection);
             dataset.create(sourceInfo, function (error, datasetInfo) {
@@ -101,11 +99,11 @@ const buildModel = async (req, res) => {
                     var model = new bigml.Model(connection);
                     model.create(datasetInfo, function (error, model) {
                         if (!error && model) {
-                            console.log(model);
                             res.status(200).json({
-                                message: "Model built",
+                                message: "Model built successes",
                                 modelInfo: model,
                             });
+                            console.log("Model built successes")
                             modelInfo = model;
                             dataInfo = datasetInfo;
                         } else {
@@ -125,70 +123,97 @@ const buildModel = async (req, res) => {
 /**
  * @description Association the order using the model
  */
-const createAssociation = (req, res) => {
-    console.log("modelInfo", modelInfo);
-    console.log("createAssociation", req.body);
-    const orderToAsso = req.body;
+const createAssociation = async (req, res) => {
     const association = new bigml.Association(connection);
     association.create(
         dataInfo,
         // { antecedent: "toppings", consequent: "toppings" },
         function (error, associationInfo) {
             if (!error && associationInfo) {
-                res.status(200).json({
-                    message: "association made",
-                    associationInfo: association,
-                });
-                associationInfo = association;
-                console.log(associationInfo);
+                console.log("associationInfo.resource : " , associationInfo.resource)
+                getAssociationRules(associationInfo.resource, res);
             } else {
                 res.status(500).send("Error making association");
             }
         }
     );
 };
+const getAssociationRules = (associationId, res) => {
+    const model = new bigml.Model(connection);
+    model.get(associationId, true, (err, modelInfo) => {
+        try {
+            console.log(modelInfo);
+            const rules = modelInfo.object.associations.rules;
+            console.log("RULES: ", rules);
+            const items = modelInfo.object.associations.items;
+            console.log("ITEMS: ", items);
+            const sets = moreRules(rules, items);
+            sets?.length && console.log(`Found ${sets.length} association rules`);
+            res?.status(200)?.send(sets);
+            return sets;
+        }catch (err){
+            if (err) {
+                console.log("Error getting model");
+                res?.status(500)?.send({ message: `Error getting model (${associationId})` });
+                return;
+            }
+            if (!rules) {
+                console.error(`No associations found (${associationId})`);
+                res?.status(500)?.send({ message: `No association rules were found (${associationId})` });
+                return;
+            }
+            if (!items) {
+                console.error(`No items found (${associationId})`);
+                res?.status(500)?.send({ message: `No items were found (${associationId})` });
+                return;
+            }
+        }
+    });
+};
+const moreRules = (rules, items) => {
+    const sets = [];
+    for (const rule of rules) {
+        const antecedents = rule.lhs.map((item) => items[item].name).join(", ");
+        const consequents = rule.rhs.map((item) => items[item].name).join(", ");
+        const support = `${rule.support[0] * 100}%`;
+        const confidence = `${rule.confidence * 100}%`;
+        const count = rule.support[1];
+        sets.push({ antecedents, consequents, support, confidence, count });
+    }
+    return sets;
+};
+// const moreRules = (rules, items) => {
+//     const sets = [];
+//     for (let i = 0; i < rules.length; ++i) {
+//         const antecedent = rules[i].lhs;
+//         const consequent = rules[i].rhs;
+//         let antecedents = "";
+//         let consequents = "";
+//
+//         for (let i = 0; i < antecedent.length; ++i) {
+//             antecedents += items[antecedent[i]].name;
+//             if (i < antecedent.length - 1) antecedents += ", ";
+//         }
+//         for (let i = 0; i < consequent.length; ++i) {
+//             consequents += items[consequent[i]].name;
+//             if (i < consequent.length - 1) consequents += ", ";
+//         }
+//         const support = rules[i].support[0] * 100 + "%";
+//         const confidence = rules[i].confidence * 100 + "%";
+//         const count = rules[i].support[1];
+//         sets.push({
+//             antecedent: antecedents,
+//             consequent: consequents,
+//             support: support,
+//             confidence: confidence,
+//             count: count,
+//         });
+//     }
+//     return sets;
+// };
 
-/**
- * @description Gets the model info
- */
-const getModelInfo = (req, res) => {
-    console.log("gettting model info");
-    if (modelInfo.resource) {
-        res.status(200).json({
-            message: "Model info",
-            modelInfo: modelInfo,
-        });
-    } else {
-        res.status(400).send("Model not built");
-    }
-};
-const getDataSetlInfo = (req, res) => {
-    console.log("gettting data set info");
-    if (modelInfo.resource) {
-        res.status(200).json({
-            message: "DataSet info",
-            dataInfo: dataInfo,
-        });
-    } else {
-        res.status(400).send("DataSet not make");
-    }
-};
-const getAssociationlInfo = (req, res) => {
-    console.log("gettting Association info");
-    if (modelInfo.resource) {
-        res.status(200).json({
-            message: "Association info",
-            associationInfo: associationInfo,
-        });
-    } else {
-        res.status(400).send("DataSet not make");
-    }
-};
 module.exports = {
-    makeJsonFile,
+    makeCSVFile,
     buildModel,
-    getDataSetlInfo,
-    getModelInfo,
     createAssociation,
-    getAssociationlInfo
 };

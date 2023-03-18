@@ -2,42 +2,23 @@ const axios = require("axios");
 const jsonfile = require("jsonfile");
 
 
-
-let modelInfo = {};
-let dataSetInfo = {};
-
 /**
  * @description Gets the model info
  */
-const getModelInfo = async (req, res) => {
-    console.log("getting model info.......");
+const getAssociation = async (req, res) => {
+    console.log("getting Association.......");
     try{
-        const call = await axios.get(`http://localhost:3003/api/modelInfo`);
-        res.status(200).json({
-            message: "get model info success",
-        })
-        modelInfo = call
-        console.log(modelInfo)
+        const call = await axios.get(`http://localhost:3003/api/buildModel`);
+        const ans = await axios.post(`http://localhost:3003/api/associationOrder`)
+        console.log("getting SUCCESSES.......")
+        res.status(200).json(ans.data);
+        console.log("end getting Association")
     }catch (error){
-        res.status(400).send("Model not make");
+        res.status(400).send("Association filed");
     }
 
 };
-const getDataSet = async (req, res) => {
-    console.log("getting data set info.......");
-    try{
-        const call = await axios.get(`http://localhost:3003/api/datasetInfo`);
-        res.status(200).json({
-            message: "get data set info success",
-        })
-        dataSetInfo = call
-        console.log(dataSetInfo)
-    }catch (error){
-        res.status(400).send("Data Set not make");
-    }
 
-};
 module.exports = {
-    getModelInfo,
-    getDataSet,
+    getAssociation,
 };
