@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 const batchController = require("./controller/batch.controller");
 const streamController = require("./controller/stream.controller");
 const elasticController = require("./controller/elastic.controller");
-// const kafkaConsumer = require("./model/Kafka");
+const kafkaConsumer = require("./model/Kafka");
 const client = require("./model/connect");
 
 const elasticClient = client.elasticClient;
@@ -60,7 +60,6 @@ app
     elasticController.searchBranchIdDate
   );
 
-
 function packOrder(message) {
   const order = {
     order_id: message.order_id,
@@ -82,8 +81,8 @@ kafkaConsumer.redisConsumer.on("data", async function (data) {
   const message = JSON.parse(data.value.toString());
   if (message.topic === "order") {
     const order = packOrder(message);
-    let order_data = await redisClient.redis.json.GET("order_data")
-    order_data =  processData()
+    let order_data = await redisClient.redis.json.GET("order_data");
+    order_data = processData();
   }
 });
 
@@ -128,11 +127,10 @@ kafkaConsumer.elasticConsumer.on("data", async function (data) {
     }
   }
 });
+
 /**
  * Start Server on port 3002
  */
-
-
 server.listen(port, () =>
   console.log("Serving Layer started at http://localhost:%d", port)
 );
