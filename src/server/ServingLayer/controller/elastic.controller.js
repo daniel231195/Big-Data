@@ -1,7 +1,5 @@
 const client = require("../model/connect");
 
-
-
 /**
  * @deletion method for deleting specific topics from elasticsearch host.
  * example: http://localhost:3000/topic/<existing topic>

@@ -22,20 +22,20 @@ elasticConsumer
   })
   .connect();
 
-// redisConsumer
-//   .on("ready", function () {
-//     console.log("Redis consumer ready");
-//     redisConsumer.subscribe([orderTopic, deliveredTopic]);
-//     redisConsumer.consume();
-//   })
-//   .on("disconnected", (arg) => {
-//     console.log("Redis consumer ${arg} disconnected.");
-//     elasticConsumer.connect();
-//   })
-//   .on("event.error", (err) => {
-//     console.log("Error from redis consumer:", err.message);
-//     elasticConsumer.disconnect();
-//   })
-//   .connect();
+redisConsumer
+  .on("ready", function () {
+    console.log("Redis consumer ready");
+    redisConsumer.subscribe([orderTopic, deliveredTopic]);
+    redisConsumer.consume();
+  })
+  .on("disconnected", (arg) => {
+    console.log("Redis consumer ${arg} disconnected.");
+    elasticConsumer.connect();
+  })
+  .on("event.error", (err) => {
+    console.log("Error from redis consumer:", err.message);
+    elasticConsumer.disconnect();
+  })
+  .connect();
 
-module.exports = { elasticConsumer };
+module.exports = { elasticConsumer, redisConsumer };

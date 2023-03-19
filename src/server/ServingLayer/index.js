@@ -77,14 +77,14 @@ function packOrder(message) {
   };
   return order;
 }
-// kafkaConsumer.redisConsumer.on("data", async function (data) {
-//   const message = JSON.parse(data.value.toString());
-//   if (message.topic === "order") {
-//     const order = packOrder(message);
-//     let order_data = await redisClient.redis.json.GET("order_data");
-//     order_data = processData();
-//   }
-// });
+kafkaConsumer.redisConsumer.on("data", async function (data) {
+  const message = JSON.parse(data.value.toString());
+  if (message.topic === "order") {
+    const order = packOrder(message);
+    let order_data = await redisClient.redis.json.GET("order_data");
+    order_data = processData();
+  }
+});
 
 kafkaConsumer.elasticConsumer.on("data", async function (data) {
   const message = JSON.parse(data.value.toString());
