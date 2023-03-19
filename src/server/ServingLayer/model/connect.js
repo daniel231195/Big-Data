@@ -7,24 +7,24 @@ const elasticClient = new Client({
   maxRetries: 5,
   requestTimeout: 60000,
 });
-const redisClient = redis.createClient({
-  host: "localhost",
-  port: 6379,
-});
+// const redisClient = redis.createClient({
+//   host: "localhost",
+//   port: 6379,
+// });
 
-redisClient
-  .on("error", (err) => {
-    console.error("Error " + err.message);
-  })
-  .on("connect", () => {
-    console.log("Receiver connected to Redis");
-  });
+// redisClient
+//   .on("error", (err) => {
+//     console.error("Error " + err.message);
+//   })
+//   .on("connect", () => {
+//     console.log("Receiver connected to Redis");
+//   });
 
-  (async () => {
-  await redisClient.connect();
-  redisClient.set('myvalue', 'value');
-  const value = await redisClient.get('myvalue');
-  console.log(value);
-})();
+//   (async () => {
+//   await redisClient.connect();
+//   redisClient.set('myvalue', 'value');
+//   const value = await redisClient.get('myvalue');
+//   console.log(value);
+// })();
 
-module.exports = { elasticClient, redisClient };
+module.exports = { elasticClient };

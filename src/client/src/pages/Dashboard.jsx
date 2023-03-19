@@ -2,7 +2,7 @@ import CartIcon from "../assets/icons/CartIcon";
 import HourglassIcon from "../assets/icons/HourglassIcon";
 import MenuBoardIcon from "../assets/icons/MenuBoardIcon";
 import MotorcycleIcon from "../assets/icons/MotorcycleIcon";
-import Card from "../components/common/Card";
+import Card from "../common/Card";
 import { DashboardCardsWrapper, DashboardWrapper } from "./Dashboard.styled";
 
 const Dashboard = () => {
