@@ -5,6 +5,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "2",
@@ -12,6 +13,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "3",
@@ -19,6 +21,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "4",
@@ -26,6 +29,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "5",
@@ -33,6 +37,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "6",
@@ -40,6 +45,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "7",
@@ -47,6 +53,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "8",
@@ -54,6 +61,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "11:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "9",
@@ -61,6 +69,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "10",
@@ -68,6 +77,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "09:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "11",
@@ -75,13 +85,15 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "12",
-    branch_name: "באר שבע - אביסרור ",
+    branch_name: "באר שבע - אביסרור",
     district: "דרום",
     openTime: "10:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "13",
@@ -89,6 +101,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "14",
@@ -96,6 +109,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "15",
@@ -103,6 +117,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "16",
@@ -110,6 +125,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:30",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "18",
@@ -117,6 +133,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "11:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "19",
@@ -124,6 +141,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:30",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "20",
@@ -131,6 +149,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "21",
@@ -138,6 +157,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "11:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "22",
@@ -145,6 +165,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "23",
@@ -152,6 +173,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "24",
@@ -159,6 +181,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "25",
@@ -166,6 +189,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "26",
@@ -173,6 +197,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "27",
@@ -180,6 +205,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "28",
@@ -187,6 +213,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "29",
@@ -194,6 +221,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "11:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "30",
@@ -201,6 +229,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "31",
@@ -208,6 +237,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "32",
@@ -215,6 +245,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "33",
@@ -222,6 +253,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "34",
@@ -229,6 +261,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "35",
@@ -236,6 +269,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "10:30",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "36",
@@ -243,6 +277,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "37",
@@ -250,6 +285,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "38",
@@ -257,6 +293,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "39",
@@ -264,6 +301,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "40",
@@ -271,6 +309,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "41",
@@ -278,6 +317,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "42",
@@ -285,6 +325,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "43",
@@ -292,6 +333,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "44",
@@ -299,6 +341,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "45",
@@ -306,6 +349,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "46",
@@ -313,6 +357,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "47",
@@ -320,6 +365,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "48",
@@ -327,6 +373,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "49",
@@ -334,6 +381,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:30",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "50",
@@ -341,6 +389,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "51",
@@ -348,6 +397,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "11:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "52",
@@ -355,6 +405,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "53",
@@ -362,6 +413,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "54",
@@ -369,6 +421,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "55",
@@ -376,6 +429,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "56",
@@ -383,6 +437,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "57",
@@ -390,6 +445,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "58",
@@ -397,6 +453,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "10:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "59",
@@ -404,6 +461,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "60",
@@ -411,6 +469,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "61",
@@ -418,6 +477,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "61",
@@ -425,6 +485,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "62",
@@ -432,6 +493,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "63",
@@ -439,6 +501,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "64",
@@ -446,6 +509,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "65",
@@ -453,6 +517,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "66",
@@ -460,6 +525,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "11:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "67",
@@ -467,13 +533,15 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "68",
-    branch_name: "נתניה - פולג ",
+    branch_name: "נתניה - פולג",
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "69",
@@ -481,6 +549,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "10:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "70",
@@ -488,6 +557,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "71",
@@ -495,6 +565,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:30",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "72",
@@ -502,6 +573,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "11:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "73",
@@ -509,6 +581,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "74",
@@ -516,6 +589,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "75",
@@ -523,6 +597,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "76",
@@ -530,6 +605,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "77",
@@ -537,6 +613,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "78",
@@ -544,6 +621,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "11:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "79",
@@ -551,6 +629,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "80",
@@ -558,6 +637,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "81",
@@ -565,6 +645,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "82",
@@ -572,6 +653,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "10:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "83",
@@ -579,6 +661,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "82",
@@ -586,6 +669,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "83",
@@ -593,6 +677,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "84",
@@ -600,6 +685,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "85",
@@ -607,6 +693,7 @@ const pizzaBranches = [
     district: "צפון",
     openTime: "10:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "86",
@@ -614,6 +701,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "87",
@@ -621,6 +709,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "88",
@@ -628,6 +717,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "10:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "89",
@@ -635,6 +725,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "90",
@@ -642,6 +733,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "91",
@@ -649,6 +741,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "92",
@@ -656,6 +749,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:00",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "93",
@@ -663,6 +757,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "10:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "94",
@@ -670,6 +765,7 @@ const pizzaBranches = [
     district: "דרום",
     openTime: "09:30",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "95",
@@ -677,6 +773,7 @@ const pizzaBranches = [
     district: "מרכז",
     openTime: "11:00",
     closeTime: "23:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "96",
@@ -684,6 +781,7 @@ const pizzaBranches = [
     district: "חיפה",
     openTime: "09:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "97",
@@ -691,6 +789,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "10:00",
     closeTime: "22:00",
+    branchOpen: "Open",
   },
   {
     branch_id: "98",
@@ -698,6 +797,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:00",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "99",
@@ -705,6 +805,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:30",
     closeTime: "23:30",
+    branchOpen: "Open",
   },
   {
     branch_id: "100",
@@ -712,6 +813,7 @@ const pizzaBranches = [
     district: "דן",
     openTime: "09:30",
     closeTime: "22:30",
+    branchOpen: "Open",
   },
 ];
 
@@ -727,7 +829,7 @@ const pizzaMapId = {
   "באקה אל גרבייה": "9",
   "באר שבע - רמות": "10",
   "באר שבע - קניון": "11",
-  "באר שבע - אביסרור ": "12",
+  "באר שבע - אביסרור": "12",
   "בילו סנטר": "13",
   "בית שאן": "14",
   "בית שמש": "15",
@@ -783,7 +885,7 @@ const pizzaMapId = {
   נצרת: "65",
   נטיבות: "66",
   "נתניה - מרכז העיר": "67",
-  "נתניה - פולג ": "68",
+  "נתניה - פולג": "68",
   סכנין: "69",
   עכו: "70",
   עפולה: "71",
@@ -820,29 +922,7 @@ const pizzaMapId = {
   "תל אביב - רמת אביב": "100",
 };
 
-
-const pizzaTopping = [
-  "עגבניה",
-  "אקסטרה גבינה",
-  "גבינה כחולה",
-  "פפרוני",
-  "פטריות",
-  "זיתים שחורים",
-  "פלפל חריף",
-  "אננס",
-  "חלפיניוס",
-  "בייקון",
-  "בשר בקר טחון",
-  "זיתים ירוקים",
-  "תירס",
-  "בצל",
-  "שום",
-  "עוף",
-  "תרד",
-  "גבינת פטה",
-  "אנשובי",
-  "לבבות ארטישוק",
-];
+const pizzaTopping = ["onion", "olives", "tomato", "corn", "mushrooms"];
 
 module.exports = {
   pizzaTopping,

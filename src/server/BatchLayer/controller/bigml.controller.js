@@ -117,7 +117,7 @@ const createAssociation = (req, res) => {
  * @description Gets the model info
  */
 const getModelInfo = (req, res) => {
-    console.log("gettting model info");
+    console.log("getting model info");
     if (modelInfo.resource) {
         res.status(200).json({
             message: "Model info",
