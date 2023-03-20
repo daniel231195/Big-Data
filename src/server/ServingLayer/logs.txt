@@ -871,3 +871,6 @@ Branch: תוביטנ, Total Time: 67, Total orders: 5, Average Time: 13.4
 Branch: אתא תירק, Total Time: 58, Total orders: 4, Average Time: 14.5
 Branch: הירהנ, Total Time: 75, Total orders: 4, Average Time: 18.75
 Branch: הקרי, Total Time: 12, Total orders: 2, Average Time: 6
+Branch: הירבט, Total Time: 83, Total orders: 6, Average Time: 13.833333333333334
+Branch: טפעוש - םילשורי, Total Time: 70, Total orders: 3, Average Time: 23.333333333333332
+Branch: הקרי, Total Time: 18, Total orders: 3, Average Time: 6
