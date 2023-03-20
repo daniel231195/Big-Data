@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
-const Card = ({ header, value, icon, ...props }) => {
-    return (
-        <CardWrapper>
-            {icon}
-            <CardDescription>{header}</CardDescription>
-        </CardWrapper>
-    )
-}
+const SimpleCard = ({ header, value, icon, data, ...props }) => {
+  return (
+    <CardWrapper>
+      {icon}
+      <CardDescription>{header}</CardDescription>
+        <div>{data}</div>
+    </CardWrapper>
+  );
+};
 
-export default Card;
+export default SimpleCard;
 
 export const CardWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  text-align: center;
   width: fit-content;
   height: fit-content;
   padding: 1em 3em 2em 3em;
@@ -24,5 +27,5 @@ export const CardWrapper = styled.div`
 `;
 
 export const CardDescription = styled.span`
- color: #b9b9b9;
+  color: #b9b9b9;
 `;
