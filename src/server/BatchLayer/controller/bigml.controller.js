@@ -138,37 +138,20 @@ const createAssociation = async (req, res) => {
         }
     );
 };
-const getAssociationRules = (associationId, res) => {
-    const model = new bigml.Model(connection);
-    model.get(associationId, true, (err, modelInfo) => {
-        try {
-            console.log(modelInfo);
-            const rules = modelInfo.object.associations.rules;
-            console.log("RULES: ", rules);
-            const items = modelInfo.object.associations.items;
-            console.log("ITEMS: ", items);
-            const sets = moreRules(rules, items);
-            sets?.length && console.log(`Found ${sets.length} association rules`);
-            res?.status(200)?.send(sets);
-            return sets;
-        }catch (err){
-            if (err) {
-                console.log("Error getting model");
-                res?.status(500)?.send({ message: `Error getting model (${associationId})` });
-                return;
-            }
-            if (!rules) {
-                console.error(`No associations found (${associationId})`);
-                res?.status(500)?.send({ message: `No association rules were found (${associationId})` });
-                return;
-            }
-            if (!items) {
-                console.error(`No items found (${associationId})`);
-                res?.status(500)?.send({ message: `No items were found (${associationId})` });
-                return;
-            }
-        }
-    });
+
+/**
+ * @description Gets the model info
+ */
+const getModelInfo = (req, res) => {
+    console.log("getting model info");
+    if (modelInfo.resource) {
+        res.status(200).json({
+            message: "Model info",
+            modelInfo: modelInfo,
+        });
+    } else {
+        res.status(400).send("Model not built");
+    }
 };
 const moreRules = (rules, items) => {
     const sets = [];

@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const orderTopic = process.env.KAFKA_ORDER_TOPIC;
 const deliveredTopic = process.env.KAFKA_DELIVERED_TOPIC;
+const eventTopic = process.env.KAFKA_EVENT_TOPIC;
 
 const producer = new Kafka.Producer(kafkaConf);
 
@@ -20,20 +21,22 @@ producer.on("ready", function (arg) {
 producer.connect();
 
 const publish = function (msg) {
-  if (!is_ready) {
-    return -1;
-  }
+  if (!is_ready) return -1;
   m = JSON.stringify(msg);
   producer.produce(orderTopic, -1, genMessage(m), uuid.v4());
 };
 const delivered = function (msg) {
-  if (!is_ready) {
-    return -1;
-  }
+  if (!is_ready) return -1;
   m = JSON.stringify(msg);
   producer.produce(deliveredTopic, -1, genMessage(m), uuid.v4());
+};
+const event = function (msg) {
+  if (!is_ready) return -1;
+  m = JSON.stringify(msg);
+  producer.produce(eventTopic, -1, genMessage(m), uuid.v4());
 };
 module.exports = {
   publish,
   delivered,
+  event,
 };

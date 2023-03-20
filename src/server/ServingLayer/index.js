@@ -38,8 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
  */
 app
   .get("/", (req, res) => res.send("Hello World!"))
-  .get("/batch/getModelInfo", batchController.getModelInfo)
-  .get("/batch/getDataSetInfo", batchController.getDataSet)
+  .get("/batch/getAssociation", batchController.getAssociation)
   .get("/api/getAllOrders", redisController.getAllOrders)
   .delete("/api/deleteKey/:key", redisController.deleteSpecificKey)
   //     .get("/stream", )
