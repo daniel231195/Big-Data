@@ -1,4 +1,5 @@
 const fs = require("fs");
+const moment = require("moment");
 
 function deltaTime(startTime, endTime) {
   startTime = parseInt(startTime.replace(":", ""));
@@ -15,6 +16,7 @@ const processData = (newOrder, ordersData) => {
   ordersData = branchesTreatmentsByTime(newOrder, ordersData);
   ordersData = openBranches(newOrder, ordersData);
   ordersData = toppingProcess(newOrder, ordersData);
+  ordersData = ordersPer2Hours(newOrder, ordersData);
   return ordersData;
 };
 
@@ -79,6 +81,29 @@ const averageTreatmentTime = (newOrder, ordersData) => {
     // console.log(`Time Difference: ${timeDiff}`);
   }
   return ordersData;
+};
+const ordersPer2Hours = (newOrder, orderData) => {
+  if (newOrder.topic === "order" && newOrder.status !== "delivered")
+    // Iterate over time ranges
+    for (const range in orderData.timeRanges) {
+      // Get start and end times
+      const [start, end] = range.split(" - ");
+
+      // Convert start and end times to moment objects
+      const startTime = moment(start, "HH:mm");
+      const endTime = moment(end, "HH:mm");
+
+      // Convert input time to moment object
+      const inputMoment = moment(newOrder.order_time, "HH:mm");
+
+      // Check if input time is between start and end times
+      if (inputMoment.isBetween(startTime, endTime)) {
+        // Increment value for matching time range
+        orderData.timeRanges[range]++;
+        break; // Stop iterating over time ranges
+      }
+    }
+  return orderData;
 };
 const ordersByDistricts = (newOrder, ordersData) => {
   if (newOrder.topic === "order" && newOrder.status !== "delivered") {

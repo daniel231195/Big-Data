@@ -37,7 +37,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
  * All Routes
  */
 app
-  .get("/", (req, res) => res.send("Hello World!"))
+  .get("/", (req, res) => res.send("Hello World From Serving Layer Server!"))
   .get("/batch/getAssociation", batchController.getAssociation)
   .get("/api/getAllOrders", redisController.getAllOrders)
   .delete("/api/deleteKey/:key", redisController.deleteSpecificKey)
@@ -64,24 +64,6 @@ app
     "/es/:branchId/:searchDay/:searchMonth/:searchYear",
     elasticController.searchBranchIdDate
   );
-
-// function packOrder(message) {
-//   const order = {
-//     order_id: message.order_id,
-//     branch_id: message.branch_id,
-//     branch_name: message.branch_name,
-//     district: message.district,
-//     order_status: message.order_status,
-//     order_date: message.order_date,
-//     order_time: message.order_time,
-//     order_served_time: message.order_served_time,
-//     toppings: message.toppings,
-//     branch_open: message.branch_open,
-//     branch_close: message.branch_close,
-//     topic: message.topic,
-//   };
-//   return order;
-// }
 
 kafkaConsumer.elasticConsumer.on("data", async function (data) {
   const message = JSON.parse(data.value);
