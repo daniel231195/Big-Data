@@ -13,6 +13,7 @@ const elasticController = require("./controller/elastic.controller");
 const redisController = require("./controller/redis.controller");
 const kafkaConsumer = require("./model/Kafka");
 const client = require("./model/connect");
+const orderProcess = require("./model/orderProcess");
 
 const elasticClient = client.elasticClient;
 const redisClient = client.redisClient;
@@ -84,14 +85,14 @@ app
 // }
 
 kafkaConsumer.elasticConsumer.on("data", async function (data) {
-  const message = JSON.parse(data.value.toString());
+  const message = JSON.parse(data.value);
   if (message.topic === "order") {
     try {
       await elasticClient.index({
         index: "order",
         id: message.order_id.toString(),
         body: {
-          ...order,
+          ...message,
         },
       });
       console.log(

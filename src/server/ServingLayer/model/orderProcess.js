@@ -14,6 +14,35 @@ const processData = (newOrder, ordersData) => {
   ordersData = ordersByDistricts(newOrder, ordersData);
   ordersData = branchesTreatmentsByTime(newOrder, ordersData);
   ordersData = openBranches(newOrder, ordersData);
+  ordersData = toppingProcess(newOrder, ordersData);
+  return ordersData;
+};
+
+const toppingProcess = (newOrder, ordersData) => {
+  if (newOrder.topic === "order") {
+    for (topping of newOrder.toppings) {
+      ordersData.topping_amount[topping]++;
+    }
+  }
+  return ordersData;
+};
+const top5CarryBranchesProcess = (ordersData) => {
+  try {
+    const sortedJson = Object.entries(ordersData.carry_time_per_branch)
+      .sort(([, a], [, b]) => a - b)
+      .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+
+    let res = sortedJson;
+    ordersData.top5CarryBranches = Object.entries(res)
+      .filter(([key, value]) => value > 0)
+      .slice(0, 5)
+      .reduce((obj, [key, value]) => {
+        obj[key] = value;
+        return obj;
+      }, {});
+  } catch (err) {
+    console.log("Top5CarryBranchesProcess Function failed: ", err);
+  }
   return ordersData;
 };
 
@@ -82,6 +111,7 @@ const branchesTreatmentsByTime = (newOrder, ordersData) => {
       }
     });
   }
+  ordersData = top5CarryBranchesProcess(ordersData);
   return ordersData;
 };
 

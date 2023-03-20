@@ -11,7 +11,7 @@ const redisConsumer = new Kafka.KafkaConsumer(kafkaConf.kafkaConfigRedis);
 elasticConsumer
   .on("ready", function () {
     console.log("Elastic Consumer ready");
-    elasticConsumer.subscribe([orderTopic, deliveredTopic, eventTopic]);
+    elasticConsumer.subscribe([orderTopic, deliveredTopic]);
     elasticConsumer.consume();
   })
   .on("disconnected", (arg) => {
