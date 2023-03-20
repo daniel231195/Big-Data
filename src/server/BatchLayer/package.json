@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon run index.js",
-    "dev": "nodemon index.js --ignore ./orderData.json"
+    "start": "nodemon run index.js  ",
+    "dev": "nodemon --ignore orderData.json index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "json2csv": "^6.0.0-alpha.2",
     "jsonfile": "^6.1.0",
     "mongodb": "^5.0.1",
     "mongoose": "^6.9.1",
