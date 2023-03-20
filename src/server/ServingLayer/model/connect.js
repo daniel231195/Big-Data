@@ -20,11 +20,22 @@ redisClient
     console.log("Receiver connected to Redis");
   });
 
-  (async () => {
+(async () => {
   await redisClient.connect();
-  redisClient.set('myvalue', 'value');
-  const value = await redisClient.get('myvalue');
-  console.log(value);
+  // RedisJSON uses JSON Path syntax. '.' is the root.
+  const allOrders = await redisClient.exists("All_orders");
+  const ordersData = await redisClient.exists("orders_data");
+  if (allOrders && ordersData) {
+    console.log(await redisClient.json.GET("orders_data"));
+  } else {
+    await redisClient.json.set("orders_data", ".", require("./dashboard.js"));
+    await redisClient.json.set("All_orders", ".", []);
+    const todayEnd = new Date().setHours(23, 59, 59, 999);
+    redisClient.EXPIREAT("calls_data", parseInt(todayEnd / 1000));
+    redisClient.EXPIREAT("All_calls", parseInt(todayEnd / 1000));
+    console.log("Creating:", await redisClient.json.GET("orders_data"));
+    console.log("Creating:", await redisClient.json.GET("All_orders"));
+  }
 })();
 
 module.exports = { elasticClient, redisClient };
