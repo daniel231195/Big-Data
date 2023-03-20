@@ -1,5 +1,5 @@
 ---
-version: "2"
+version: "3.7"
 services:
   elasticsearch:
     image: docker.io/bitnami/elasticsearch:8
@@ -20,15 +20,17 @@ services:
       - elasticsearch
 
   redis:
-    image: docker.io/bitnami/redis:7.0
+    image: redis/redis-stack:latest
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
       - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
     ports:
       - "6379:6379"
+    # command: ["redis-server", "/opt/bitnami/redis/conf/redis.conf"]
     volumes:
-      - "redis_data:/bitnami/redis/data"
+      - "redis_data:/redis/data"
+      # - "./redis.conf:/opt/bitnami/redis/conf/redis.conf"
 
 volumes:
   elasticsearch_data:

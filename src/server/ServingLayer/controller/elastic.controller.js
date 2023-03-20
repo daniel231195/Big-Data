@@ -1,4 +1,5 @@
-const client = require("../model/connect");
+const connect = require("../model/connect");
+const client = connect.elasticClient;
 
 /**
  * @deletion method for deleting specific topics from elasticsearch host.
@@ -58,7 +59,7 @@ const searchAll = async (req, res) => {
 };
 /**
  * @GET method use to search for records from particular branch and in particular date.
- * Example for a request localhost:3000/search/<branch_id>/<day>/<month>/<year>
+ * Example for a request localhost:3002/search/<branch_id>/<day>/<month>/<year>
  * Return valid records from this dates and branch
  */
 const searchBranchIdDate = async (req, res) => {
@@ -66,6 +67,7 @@ const searchBranchIdDate = async (req, res) => {
     const { branchId, searchDay, searchMonth, searchYear } = req.params;
     const body = await client.search({
       index: "order",
+      size: 100,
       body: {
         query: {
           bool: {
