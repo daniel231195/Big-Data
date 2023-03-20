@@ -15,6 +15,7 @@ const client = require("./model/connect");
 
 const elasticClient = client.elasticClient;
 const redisClient = client.redisClient;
+
 const port = process.env.PORT || 3002;
 
 const server = http.createServer(app);
@@ -35,7 +36,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
  */
 app
   .get("/", (req, res) => res.send("Hello World!"))
-  .get("/batch/getAssociation", batchController.getAssociation);
+  .get("/batch/getModelInfo", batchController.getModelInfo)
+  .get("/batch/getDataSetInfo", batchController.getDataSet);
 //     .get("/stream", )
 /**
  * @deletion method for deleting specific topics from elasticsearch host.
@@ -78,11 +80,10 @@ function packOrder(message) {
   return order;
 }
 kafkaConsumer.redisConsumer.on("data", async function (data) {
-  const message = JSON.parse(data.value.toString());
+  const message = JSON.parse(data.value);
   if (message.topic === "order") {
     const order = packOrder(message);
-    let order_data = await redisClient.redis.json.GET("order_data");
-    order_data = processData();
+    await redisClient.json.ARRINSERT("all_orders", "$", 0, order);
   }
 });
 
@@ -127,10 +128,10 @@ kafkaConsumer.elasticConsumer.on("data", async function (data) {
     }
   }
 });
-
 /**
  * Start Server on port 3002
  */
+
 server.listen(port, () =>
   console.log("Serving Layer started at http://localhost:%d", port)
 );
