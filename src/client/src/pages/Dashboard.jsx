@@ -83,9 +83,6 @@ const Dashboard = () => {
           }
         />{" "}
       </DashboardCardsWrapper>
-      <DashboardCardsWrapper>
-        <SimpleCard header={generalOrders} />
-      </DashboardCardsWrapper>
     </DashboardWrapper>
   );
 };

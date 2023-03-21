@@ -5,18 +5,13 @@ import Dashboard from "./pages/Dashboard";
 import Analyze from "./pages/Analyze";
 import Search from "./pages/Search";
 import { useEffect } from "react";
-import { getAssociation } from "./Utils/apiUtils";
-import { useState } from "react";
 
 
 function App() {
-  const [association, setAssociation] = useState();
+
 
   useEffect(() => {
     document.title = 'Ordering Pizza App';
-    getAssociation().then((res) => {
-      setAssociation(res.data);
-    })
   }, []);
 
   return (
@@ -26,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/analyze" element={<Analyze association={association} />} />
+          <Route path="/analyze" element={<Analyze  />} />
         </Routes>
       </AppBody>
     </AppWrapper>
