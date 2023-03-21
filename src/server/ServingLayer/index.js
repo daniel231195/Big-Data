@@ -5,6 +5,7 @@ require("dotenv").config({ path: `${__dirname}/../../../.env` });
 const http = require("http");
 const express = require("express");
 const app = express();
+require('events').EventEmitter.defaultMaxListeners = 15;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const batchController = require("./controller/batch.controller");

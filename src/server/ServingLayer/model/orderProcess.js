@@ -1,5 +1,7 @@
 const fs = require("fs");
 const moment = require("moment");
+const { delivered } = require("../../StreamLayer/model/kafka");
+const { total_orders } = require("./dashboard");
 
 function deltaTime(startTime, endTime) {
   startTime = parseInt(startTime.replace(":", ""));
@@ -9,7 +11,6 @@ function deltaTime(startTime, endTime) {
   return minDiff >= 60 ? minDiff - 60 : minDiff;
 }
 const processData = (newOrder, ordersData) => {
-  ordersData.total_orders++;
   ordersData = processTotalOpenOrders(newOrder, ordersData);
   ordersData = averageTreatmentTime(newOrder, ordersData);
   ordersData = ordersByDistricts(newOrder, ordersData);
@@ -21,12 +22,35 @@ const processData = (newOrder, ordersData) => {
 };
 
 const toppingProcess = (newOrder, ordersData) => {
-  if (newOrder.topic === "order") {
+  if (newOrder.topic === "order" && newOrder.status !== "delivered") {
+    ordersData.total_orders++;
     for (topping of newOrder.toppings) {
       ordersData.topping_amount[topping]++;
     }
   }
+  ordersData = top5ToppingProcess(newOrder, ordersData);
   return ordersData;
+};
+
+const top5ToppingProcess = (newOrder, orderData) => {
+  if (newOrder.topic === "order" && newOrder.status !== "delivered") {
+    try {
+      const sortedJson = Object.entries(orderData.topping_amount)
+        .sort(([, a], [, b]) => b - a)
+        .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+
+      let res = sortedJson;
+      orderData.top5Topping = Object.entries(res)
+        .slice(0, 5)
+        .reduce((obj, [key, value]) => {
+          obj[key] = value;
+          return obj;
+        }, {});
+    } catch (err) {
+      console.log("Top5ToppingProcess Function failed: ", err);
+    }
+    return orderData;
+  }
 };
 const top5CarryBranchesProcess = (ordersData) => {
   try {
@@ -82,6 +106,7 @@ const averageTreatmentTime = (newOrder, ordersData) => {
   }
   return ordersData;
 };
+
 const ordersPer2Hours = (newOrder, orderData) => {
   if (newOrder.topic === "order" && newOrder.status !== "delivered")
     // Iterate over time ranges
@@ -123,18 +148,6 @@ const branchesTreatmentsByTime = (newOrder, ordersData) => {
     ordersData.carry_time_per_branch[newOrder.branch_name] =
       ordersData.total_time_per_branch[newOrder.branch_name] /
       ordersData.orders_amount_by_branch[newOrder.branch_name];
-    const content = `Branch: ${newOrder.branch_name}, Total Time: ${
-      ordersData.total_time_per_branch[newOrder.branch_name]
-    }, Total orders: ${
-      ordersData.orders_amount_by_branch[newOrder.branch_name]
-    }, Average Time: ${
-      ordersData.carry_time_per_branch[newOrder.branch_name]
-    }\n`;
-    fs.writeFile("logs.txt", content, { flag: "a+" }, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
   }
   ordersData = top5CarryBranchesProcess(ordersData);
   return ordersData;
