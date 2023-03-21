@@ -1,14 +1,16 @@
+import { useEffect } from "react";
+import { Pie } from "react-chartjs-2";
 import styled from "styled-components";
-import PieChart from "../components/PieChart";
 
 const PieCard = ({ header, value, icon, data, labels, pieData, ...props }) => {
+
     const pieInfo = {
-        labels: labels,
+        labels: labels? labels.map((el) => el.split("").reverse().join("") ) : '',
         datasets: [
           {
-            pieData: pieData,
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            data: pieData,
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", '#457b9d', '#faedcd'],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", '#457b9d', '#faedcd'],
           },
         ],
       };
@@ -18,7 +20,7 @@ const PieCard = ({ header, value, icon, data, labels, pieData, ...props }) => {
       {icon}
       <PieCardDescription>{header}</PieCardDescription>
         <div>{data}</div>
-        <PieChart data={pieInfo}/>
+        <Pie data={pieInfo} />
     </PieCardWrapper>
   );
 };
