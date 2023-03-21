@@ -12,6 +12,4 @@ export const DashboardWrapper = styled.div`
 export const DashboardCardsWrapper = styled.div`
     display: flex;
     gap: 10px;
-    justify-content: flex-start;
-    align-items: flex-start;
 `;

@@ -1724,3 +1724,620 @@ Branch: ישי תמר, Total Time: 52, Total orders: 2, Average Time: 26
 Branch: באז תגספ - םילשורי, Total Time: 48, Total orders: 3, Average Time: 16
 Branch: םענקי, Total Time: 126, Total orders: 7, Average Time: 18
 Branch: באז תגספ - םילשורי, Total Time: 73, Total orders: 4, Average Time: 18.25
+Branch: תוינ - םילשורי, Total Time: 92, Total orders: 5, Average Time: 18.4
+Branch: ללה תיב - םילשורי, Total Time: 58, Total orders: 3, Average Time: 19.333333333333332
+Branch: הירהנ, Total Time: 56, Total orders: 3, Average Time: 18.666666666666668
+Branch: הנבי, Total Time: 40, Total orders: 4, Average Time: 10
+Branch: ברעמ - ןויצל ןושאר, Total Time: 62, Total orders: 4, Average Time: 15.5
+Branch: םענקי, Total Time: 134, Total orders: 8, Average Time: 16.75
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 35, Total orders: 4, Average Time: 8.75
+Branch: ריעה זכרמ - הינתנ, Total Time: 163, Total orders: 7, Average Time: 23.285714285714285
+Branch: לאימרכ, Total Time: 19, Total orders: 2, Average Time: 9.5
+Branch: תוינ - םילשורי, Total Time: 99, Total orders: 6, Average Time: 16.5
+Branch: ישי תמר, Total Time: 58, Total orders: 3, Average Time: 19.333333333333332
+Branch: תינמרג הבשומ - הפיח, Total Time: 167, Total orders: 8, Average Time: 20.875
+Branch: אבס רפכ, Total Time: 117, Total orders: 7, Average Time: 16.714285714285715
+Branch: תוביטנ, Total Time: 102, Total orders: 6, Average Time: 17
+Branch: לאומש תעבג, Total Time: 5, Total orders: 1, Average Time: 5
+Branch: הנח סדרפ, Total Time: 126, Total orders: 7, Average Time: 18
+Branch: הנח סדרפ, Total Time: 134, Total orders: 8, Average Time: 16.75
+Branch: ןוסנילב - הווקת חתפ, Total Time: 97, Total orders: 4, Average Time: 24.25
+Branch: אתא תירק, Total Time: 8, Total orders: 1, Average Time: 8
+Branch: םהוש, Total Time: 36, Total orders: 3, Average Time: 12
+Branch: ףיעסי רפכ, Total Time: 84, Total orders: 3, Average Time: 28
+Branch: ןוסידא קראפ, Total Time: 39, Total orders: 3, Average Time: 13
+Branch: הנויצ סנ, Total Time: 106, Total orders: 4, Average Time: 26.5
+Branch: הקרי, Total Time: 65, Total orders: 4, Average Time: 16.25
+Branch: תינמרג הבשומ - הפיח, Total Time: 176, Total orders: 9, Average Time: 19.555555555555557
+Branch: דודשא, Total Time: 20, Total orders: 2, Average Time: 10
+Branch: תובשומה םא - הווקת חתפ, Total Time: 89, Total orders: 3, Average Time: 29.666666666666668
+Branch: ןיעה שאר, Total Time: 61, Total orders: 3, Average Time: 20.333333333333332
+Branch: ישי תמר, Total Time: 75, Total orders: 4, Average Time: 18.75
+Branch: דרע, Total Time: 78, Total orders: 3, Average Time: 26
+Branch: ונוא תירק, Total Time: 120, Total orders: 6, Average Time: 20
+Branch: ןולקשא, Total Time: 5, Total orders: 1, Average Time: 5
+Branch: םודא ןוינק - תליא, Total Time: 102, Total orders: 4, Average Time: 25.5
+Branch: לאומש תעבג, Total Time: 18, Total orders: 2, Average Time: 9
+Branch: םי תב, Total Time: 24, Total orders: 2, Average Time: 12
+Branch: קרב ינב, Total Time: 52, Total orders: 4, Average Time: 13
+Branch: סרפסקא - לאימרכ, Total Time: 125, Total orders: 6, Average Time: 20.833333333333332
+Branch: הירומ - הפיח, Total Time: 56, Total orders: 4, Average Time: 14
+Branch: תוינ - םילשורי, Total Time: 114, Total orders: 7, Average Time: 16.285714285714285
+Branch: הבייט, Total Time: 55, Total orders: 3, Average Time: 18.333333333333332
+Branch: ברעמ ןולוח, Total Time: 45, Total orders: 3, Average Time: 15
+Branch: דודשא, Total Time: 31, Total orders: 3, Average Time: 10.333333333333334
+Branch: שירח, Total Time: 43, Total orders: 4, Average Time: 10.75
+Branch: ןוינק - עבש ראב, Total Time: 69, Total orders: 3, Average Time: 23
+Branch: תובוחר, Total Time: 31, Total orders: 2, Average Time: 15.5
+Branch: למרכ לא תילד, Total Time: 65, Total orders: 3, Average Time: 21.666666666666668
+Branch: םענקי, Total Time: 149, Total orders: 9, Average Time: 16.555555555555557
+Branch: תורדש, Total Time: 81, Total orders: 5, Average Time: 16.2
+Branch: טהר, Total Time: 38, Total orders: 3, Average Time: 12.666666666666666
+Branch: לאימרכ, Total Time: 34, Total orders: 3, Average Time: 11.333333333333334
+Branch: הנומיד, Total Time: 31, Total orders: 3, Average Time: 10.333333333333334
+Branch: ןוינכט - הפיח, Total Time: 11, Total orders: 1, Average Time: 11
+Branch: לבוי תירק - םילשורי, Total Time: 66, Total orders: 4, Average Time: 16.5
+Branch: הוונ םורמ - ןג תמר, Total Time: 64, Total orders: 4, Average Time: 16
+Branch: םיאנומשח - ביבא לת, Total Time: 151, Total orders: 7, Average Time: 21.571428571428573
+Branch: ערק רפכ, Total Time: 28, Total orders: 2, Average Time: 14
+Branch: ןורשה תמר, Total Time: 81, Total orders: 4, Average Time: 20.25
+Branch: הנוי רפכ, Total Time: 79, Total orders: 6, Average Time: 13.166666666666666
+Branch: תלייט - תליא, Total Time: 19, Total orders: 1, Average Time: 19
+Branch: ברעמ ןולוח, Total Time: 62, Total orders: 4, Average Time: 15.5
+Branch: הירומ - הפיח, Total Time: 66, Total orders: 5, Average Time: 13.2
+Branch: הוונ םורמ - ןג תמר, Total Time: 85, Total orders: 5, Average Time: 17
+Branch: הירהנ, Total Time: 62, Total orders: 4, Average Time: 15.5
+Branch: בקעי ןורכז, Total Time: 30, Total orders: 2, Average Time: 15
+Branch: טהר, Total Time: 50, Total orders: 4, Average Time: 12.5
+Branch: תורדש, Total Time: 100, Total orders: 6, Average Time: 16.666666666666668
+Branch: ןיעידומ, Total Time: 95, Total orders: 7, Average Time: 13.571428571428571
+Branch: ריעה זכרמ - הינתנ, Total Time: 185, Total orders: 8, Average Time: 23.125
+Branch: הבייט, Total Time: 77, Total orders: 4, Average Time: 19.25
+Branch: דודשא, Total Time: 36, Total orders: 4, Average Time: 9
+Branch: רורד ינב, Total Time: 107, Total orders: 5, Average Time: 21.4
+Branch: תוינ - םילשורי, Total Time: 126, Total orders: 8, Average Time: 15.75
+Branch: םענקי, Total Time: 168, Total orders: 10, Average Time: 16.8
+Branch: ןורשה דוה, Total Time: 41, Total orders: 2, Average Time: 20.5
+Branch: שמש תיב, Total Time: 91, Total orders: 5, Average Time: 18.2
+Branch: ררמ רפכ, Total Time: 10, Total orders: 1, Average Time: 10
+Branch: הבייט, Total Time: 100, Total orders: 5, Average Time: 20
+Branch: הירומ - הפיח, Total Time: 85, Total orders: 6, Average Time: 14.166666666666666
+Branch: רטנס וליב, Total Time: 62, Total orders: 4, Average Time: 15.5
+Branch: ןוסידא קראפ, Total Time: 46, Total orders: 4, Average Time: 11.5
+Branch: הירומ - הפיח, Total Time: 103, Total orders: 7, Average Time: 14.714285714285714
+Branch: ןורשה דוה, Total Time: 49, Total orders: 3, Average Time: 16.333333333333332
+Branch: םי תב, Total Time: 39, Total orders: 3, Average Time: 13
+Branch: טפעוש - םילשורי, Total Time: 110, Total orders: 5, Average Time: 22
+Branch: םייתעבג, Total Time: 38, Total orders: 2, Average Time: 19
+Branch: קרב ינב, Total Time: 78, Total orders: 5, Average Time: 15.6
+Branch: דודשא, Total Time: 43, Total orders: 5, Average Time: 8.6
+Branch: ריעה זכרמ - הינתנ, Total Time: 192, Total orders: 9, Average Time: 21.333333333333332
+Branch: קרב ינב, Total Time: 92, Total orders: 6, Average Time: 15.333333333333334
+Branch: קילאיב ןוינק - ןג תמר, Total Time: 59, Total orders: 4, Average Time: 14.75
+Branch: ןיעה שאר, Total Time: 90, Total orders: 4, Average Time: 22.5
+Branch: תינמרג הבשומ - הפיח, Total Time: 188, Total orders: 10, Average Time: 18.8
+Branch: םימודא הלעמ, Total Time: 77, Total orders: 4, Average Time: 19.25
+Branch: תרצנ, Total Time: 103, Total orders: 5, Average Time: 20.6
+Branch: םהוש, Total Time: 57, Total orders: 4, Average Time: 14.25
+Branch: םודא ןוינק - תליא, Total Time: 125, Total orders: 5, Average Time: 25
+Branch: ןיעידומ, Total Time: 104, Total orders: 8, Average Time: 13
+Branch: ןומר הפצמ, Total Time: 149, Total orders: 6, Average Time: 24.833333333333332
+Branch: הילצרה, Total Time: 92, Total orders: 4, Average Time: 23
+Branch: ןיקצומ תירק, Total Time: 32, Total orders: 2, Average Time: 16
+Branch: החלמ - םילשורי, Total Time: 14, Total orders: 1, Average Time: 14
+Branch: הוונ םורמ - ןג תמר, Total Time: 97, Total orders: 6, Average Time: 16.166666666666668
+Branch: החלמ - םילשורי, Total Time: 35, Total orders: 2, Average Time: 17.5
+Branch: תוביטנ, Total Time: 124, Total orders: 7, Average Time: 17.714285714285715
+Branch: ןורשה דוה, Total Time: 74, Total orders: 4, Average Time: 18.5
+Branch: שמש תיב, Total Time: 111, Total orders: 6, Average Time: 18.5
+Branch: תובוחר, Total Time: 61, Total orders: 3, Average Time: 20.333333333333332
+Branch: תולעמ, Total Time: 24, Total orders: 1, Average Time: 24
+Branch: ןוינכט - הפיח, Total Time: 22, Total orders: 2, Average Time: 11
+Branch: םירה- תלייא, Total Time: 58, Total orders: 3, Average Time: 19.333333333333332
+Branch: ןיעידומ, Total Time: 127, Total orders: 9, Average Time: 14.11111111111111
+Branch: בקעי ןורכז, Total Time: 45, Total orders: 3, Average Time: 15
+Branch: הנח סדרפ, Total Time: 148, Total orders: 9, Average Time: 16.444444444444443
+Branch: בקעי ןורכז, Total Time: 72, Total orders: 4, Average Time: 18
+Branch: ןיקריס - הווקת חתפ, Total Time: 41, Total orders: 2, Average Time: 20.5
+Branch: דול הלמר, Total Time: 96, Total orders: 4, Average Time: 24
+Branch: סרפסקא - לאימרכ, Total Time: 135, Total orders: 7, Average Time: 19.285714285714285
+Branch: לאימרכ, Total Time: 45, Total orders: 4, Average Time: 11.25
+Branch: ןיקצומ תירק, Total Time: 52, Total orders: 3, Average Time: 17.333333333333332
+Branch: סרפסקא - לאימרכ, Total Time: 157, Total orders: 8, Average Time: 19.625
+Branch: ןיעידומ, Total Time: 148, Total orders: 10, Average Time: 14.8
+Branch: החלמ - םילשורי, Total Time: 66, Total orders: 3, Average Time: 22
+Branch: לייחה תמר - ביבא לת, Total Time: 110, Total orders: 5, Average Time: 22
+Branch: הנח סדרפ, Total Time: 171, Total orders: 10, Average Time: 17.1
+Branch: ןויצ תרשבמ, Total Time: 74, Total orders: 4, Average Time: 18.5
+Branch: ברעמ - ןויצל ןושאר, Total Time: 94, Total orders: 5, Average Time: 18.8
+Branch: תרצנ, Total Time: 122, Total orders: 6, Average Time: 20.333333333333332
+Branch: הניפ שאר, Total Time: 59, Total orders: 3, Average Time: 19.666666666666668
+Branch: אביקע רוא, Total Time: 49, Total orders: 2, Average Time: 24.5
+Branch: תרצנ, Total Time: 143, Total orders: 7, Average Time: 20.428571428571427
+Branch: תוינ - םילשורי, Total Time: 149, Total orders: 9, Average Time: 16.555555555555557
+Branch: ןולקשא, Total Time: 39, Total orders: 2, Average Time: 19.5
+Branch: תוביטנ, Total Time: 129, Total orders: 8, Average Time: 16.125
+Branch: הבייט, Total Time: 131, Total orders: 6, Average Time: 21.833333333333332
+Branch: ןוינכט - הפיח, Total Time: 44, Total orders: 3, Average Time: 14.666666666666666
+Branch: ןוסנילב - הווקת חתפ, Total Time: 118, Total orders: 5, Average Time: 23.6
+Branch: ונוא תירק, Total Time: 133, Total orders: 7, Average Time: 19
+Branch: שמש תיב, Total Time: 119, Total orders: 7, Average Time: 17
+Branch: ןוינכט - הפיח, Total Time: 76, Total orders: 4, Average Time: 19
+Branch: אבס רפכ, Total Time: 144, Total orders: 8, Average Time: 18
+Branch: הנח סדרפ, Total Time: 201, Total orders: 11, Average Time: 18.272727272727273
+Branch: והילא די - ביבא לת, Total Time: 135, Total orders: 7, Average Time: 19.285714285714285
+Branch: סרפסקא - לאימרכ, Total Time: 169, Total orders: 9, Average Time: 18.77777777777778
+Branch: הנח סדרפ, Total Time: 226, Total orders: 12, Average Time: 18.833333333333332
+Branch: הריט, Total Time: 57, Total orders: 3, Average Time: 19
+Branch: ונוא תירק, Total Time: 145, Total orders: 8, Average Time: 18.125
+Branch: םירה- תלייא, Total Time: 74, Total orders: 4, Average Time: 18.5
+Branch: חרזמ - ןויצל ןושאר, Total Time: 56, Total orders: 4, Average Time: 14
+Branch: ףיעסי רפכ, Total Time: 95, Total orders: 4, Average Time: 23.75
+Branch: ריעה זכרמ - הינתנ, Total Time: 205, Total orders: 10, Average Time: 20.5
+Branch: תינמרג הבשומ - הפיח, Total Time: 210, Total orders: 11, Average Time: 19.09090909090909
+Branch: הירבט, Total Time: 31, Total orders: 2, Average Time: 15.5
+Branch: למרכ לא תילד, Total Time: 75, Total orders: 4, Average Time: 18.75
+Branch: הנבי, Total Time: 62, Total orders: 5, Average Time: 12.4
+Branch: תרצנ, Total Time: 157, Total orders: 8, Average Time: 19.625
+Branch: רטנס וליב, Total Time: 89, Total orders: 5, Average Time: 17.8
+Branch: קילאיב ןוינק - ןג תמר, Total Time: 71, Total orders: 5, Average Time: 14.2
+Branch: ישי תמר, Total Time: 83, Total orders: 5, Average Time: 16.6
+Branch: םי תב, Total Time: 56, Total orders: 4, Average Time: 14
+Branch: הבייט, Total Time: 127, Total orders: 6, Average Time: 21.166666666666668
+Branch: ןיעה שאר, Total Time: 97, Total orders: 5, Average Time: 19.4
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 63, Total orders: 5, Average Time: 12.6
+Branch: םסק רפכ, Total Time: 101, Total orders: 4, Average Time: 25.25
+Branch: םהוש, Total Time: 89, Total orders: 5, Average Time: 17.8
+Branch: הילצרה, Total Time: 130, Total orders: 5, Average Time: 26
+Branch: ריעה זכרמ - הינתנ, Total Time: 216, Total orders: 11, Average Time: 19.636363636363637
+Branch: קרב ינב, Total Time: 119, Total orders: 7, Average Time: 17
+Branch: םימודא הלעמ, Total Time: 88, Total orders: 5, Average Time: 17.6
+Branch: סרפסקא - לאימרכ, Total Time: 187, Total orders: 10, Average Time: 18.7
+Branch: ערק רפכ, Total Time: 57, Total orders: 3, Average Time: 19
+Branch: ריעה זכרמ - הינתנ, Total Time: 252, Total orders: 12, Average Time: 21
+Branch: טהר, Total Time: 87, Total orders: 5, Average Time: 17.4
+Branch: םהוש, Total Time: 106, Total orders: 6, Average Time: 17.666666666666668
+Branch: דול הלמר, Total Time: 121, Total orders: 5, Average Time: 24.2
+Branch: לייחה תמר - ביבא לת, Total Time: 125, Total orders: 6, Average Time: 20.833333333333332
+Branch: ללה תיב - םילשורי, Total Time: 92, Total orders: 4, Average Time: 23
+Branch: דוהי, Total Time: 94, Total orders: 3, Average Time: 31.333333333333332
+Branch: דודשא, Total Time: 61, Total orders: 6, Average Time: 10.166666666666666
+Branch: רורד ינב, Total Time: 138, Total orders: 6, Average Time: 23
+Branch: םהוש, Total Time: 121, Total orders: 7, Average Time: 17.285714285714285
+Branch: םי תב, Total Time: 89, Total orders: 5, Average Time: 17.8
+Branch: ןיעידומ, Total Time: 165, Total orders: 11, Average Time: 15
+Branch: טהר, Total Time: 94, Total orders: 6, Average Time: 15.666666666666666
+Branch: לאומש תעבג, Total Time: 46, Total orders: 3, Average Time: 15.333333333333334
+Branch: ונוא תירק, Total Time: 169, Total orders: 9, Average Time: 18.77777777777778
+Branch: הקרי, Total Time: 77, Total orders: 5, Average Time: 15.4
+Branch: תובשומה םא - הווקת חתפ, Total Time: 110, Total orders: 4, Average Time: 27.5
+Branch: ללה תיב - םילשורי, Total Time: 123, Total orders: 5, Average Time: 24.6
+Branch: רורד ינב, Total Time: 122, Total orders: 6, Average Time: 20.333333333333332
+Branch: תוינ - םילשורי, Total Time: 167, Total orders: 10, Average Time: 16.7
+Branch: םינג - רפכ הווקת חתפ, Total Time: 75, Total orders: 4, Average Time: 18.75
+Branch: שמש תיב, Total Time: 141, Total orders: 8, Average Time: 17.625
+Branch: הרמס םיחאה ןוינק - םערפש, Total Time: 79, Total orders: 3, Average Time: 26.333333333333332
+Branch: ןיקריס - הווקת חתפ, Total Time: 68, Total orders: 3, Average Time: 22.666666666666668
+Branch: הנומש - תירק, Total Time: 55, Total orders: 4, Average Time: 13.75
+Branch: ריעה זכרמ - הינתנ, Total Time: 290, Total orders: 13, Average Time: 22.307692307692307
+Branch: הנומיד, Total Time: 46, Total orders: 4, Average Time: 11.5
+Branch: הילצרה, Total Time: 152, Total orders: 6, Average Time: 25.333333333333332
+Branch: לייחה תמר - ביבא לת, Total Time: 138, Total orders: 7, Average Time: 19.714285714285715
+Branch: והילא די - ביבא לת, Total Time: 169, Total orders: 8, Average Time: 21.125
+Branch: הנבי, Total Time: 87, Total orders: 6, Average Time: 14.5
+Branch: תרצנ, Total Time: 195, Total orders: 9, Average Time: 21.666666666666668
+Branch: לאומש תעבג, Total Time: 71, Total orders: 4, Average Time: 17.75
+Branch: םענקי, Total Time: 184, Total orders: 11, Average Time: 16.727272727272727
+Branch: בקעי ןורכז, Total Time: 113, Total orders: 5, Average Time: 22.6
+Branch: ערק רפכ, Total Time: 75, Total orders: 4, Average Time: 18.75
+Branch: ןיעה שאר, Total Time: 114, Total orders: 6, Average Time: 19
+Branch: אביקע רוא, Total Time: 57, Total orders: 3, Average Time: 19
+Branch: והילא די - ביבא לת, Total Time: 193, Total orders: 9, Average Time: 21.444444444444443
+Branch: גלופ - הינתנ, Total Time: 89, Total orders: 3, Average Time: 29.666666666666668
+Branch: ןורשה תמר, Total Time: 124, Total orders: 5, Average Time: 24.8
+Branch: םענקי, Total Time: 227, Total orders: 12, Average Time: 18.916666666666668
+Branch: ןיעידומ, Total Time: 188, Total orders: 12, Average Time: 15.666666666666666
+Branch: ןאש תיב, Total Time: 109, Total orders: 4, Average Time: 27.25
+Branch: אביקע רוא, Total Time: 91, Total orders: 4, Average Time: 22.75
+Branch: חרזמ ןולוח, Total Time: 110, Total orders: 4, Average Time: 27.5
+Branch: בקעי ןורכז, Total Time: 124, Total orders: 6, Average Time: 20.666666666666668
+Branch: הלופע, Total Time: 128, Total orders: 3, Average Time: 42.666666666666664
+Branch: ררמ רפכ, Total Time: 49, Total orders: 2, Average Time: 24.5
+Branch: םיקפוא, Total Time: 104, Total orders: 4, Average Time: 26
+Branch: הנומש - תירק, Total Time: 75, Total orders: 5, Average Time: 15
+Branch: תומר - עבש ראב, Total Time: 59, Total orders: 3, Average Time: 19.666666666666668
+Branch: טהר, Total Time: 137, Total orders: 7, Average Time: 19.571428571428573
+Branch: תולעמ, Total Time: 51, Total orders: 2, Average Time: 25.5
+Branch: ןיעה שאר, Total Time: 123, Total orders: 7, Average Time: 17.571428571428573
+Branch: שמש תיב, Total Time: 164, Total orders: 9, Average Time: 18.22222222222222
+Branch: הנח סדרפ, Total Time: 270, Total orders: 13, Average Time: 20.76923076923077
+Branch: ןאש תיב, Total Time: 128, Total orders: 5, Average Time: 25.6
+Branch: הנוי רפכ, Total Time: 119, Total orders: 7, Average Time: 17
+Branch: הייברג לא הקאב, Total Time: 156, Total orders: 6, Average Time: 26
+Branch: הרמס םיחאה ןוינק - םערפש, Total Time: 86, Total orders: 4, Average Time: 21.5
+Branch: םי תב, Total Time: 126, Total orders: 6, Average Time: 21
+Branch: לייחה תמר - ביבא לת, Total Time: 160, Total orders: 8, Average Time: 20
+Branch: םהוש, Total Time: 141, Total orders: 8, Average Time: 17.625
+Branch: םירה- תלייא, Total Time: 99, Total orders: 5, Average Time: 19.8
+Branch: ישי תמר, Total Time: 114, Total orders: 6, Average Time: 19
+Branch: דוהי, Total Time: 117, Total orders: 4, Average Time: 29.25
+Branch: ברעמ - ןויצל ןושאר, Total Time: 135, Total orders: 6, Average Time: 22.5
+Branch: הנויצ סנ, Total Time: 131, Total orders: 5, Average Time: 26.2
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 104, Total orders: 6, Average Time: 17.333333333333332
+Branch: ברעמ ןולוח, Total Time: 82, Total orders: 5, Average Time: 16.4
+Branch: הריט, Total Time: 63, Total orders: 4, Average Time: 15.75
+Branch: הנויצ סנ, Total Time: 150, Total orders: 6, Average Time: 25
+Branch: הקרי, Total Time: 110, Total orders: 6, Average Time: 18.333333333333332
+Branch: םיאנומשח - ביבא לת, Total Time: 179, Total orders: 8, Average Time: 22.375
+Branch: ררמ רפכ, Total Time: 67, Total orders: 3, Average Time: 22.333333333333332
+Branch: תובשומה םא - הווקת חתפ, Total Time: 120, Total orders: 5, Average Time: 24
+Branch: טהר, Total Time: 184, Total orders: 8, Average Time: 23
+Branch: תלייט - תליא, Total Time: 52, Total orders: 2, Average Time: 26
+Branch: תובשומה םא - הווקת חתפ, Total Time: 149, Total orders: 6, Average Time: 24.833333333333332
+Branch: םייתעבג, Total Time: 74, Total orders: 3, Average Time: 24.666666666666668
+Branch: לייחה תמר - ביבא לת, Total Time: 206, Total orders: 9, Average Time: 22.88888888888889
+Branch: תובשומה םא - הווקת חתפ, Total Time: 159, Total orders: 7, Average Time: 22.714285714285715
+Branch: ריעה זכרמ - הינתנ, Total Time: 319, Total orders: 14, Average Time: 22.785714285714285
+Branch: תורדש, Total Time: 130, Total orders: 7, Average Time: 18.571428571428573
+Branch: אבס רפכ, Total Time: 159, Total orders: 9, Average Time: 17.666666666666668
+Branch: אתא תירק, Total Time: 17, Total orders: 2, Average Time: 8.5
+Branch: הנומש - תירק, Total Time: 108, Total orders: 6, Average Time: 18
+Branch: ןיקצומ תירק, Total Time: 59, Total orders: 4, Average Time: 14.75
+Branch: ררמ רפכ, Total Time: 84, Total orders: 4, Average Time: 21
+Branch: לאומש תעבג, Total Time: 112, Total orders: 5, Average Time: 22.4
+Branch: הירומ - הפיח, Total Time: 141, Total orders: 8, Average Time: 17.625
+Branch: תולעמ, Total Time: 83, Total orders: 3, Average Time: 27.666666666666668
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 134, Total orders: 7, Average Time: 19.142857142857142
+Branch: לאומש תעבג, Total Time: 119, Total orders: 6, Average Time: 19.833333333333332
+Branch: תובשומה םא - הווקת חתפ, Total Time: 197, Total orders: 8, Average Time: 24.625
+Branch: תולעמ, Total Time: 125, Total orders: 4, Average Time: 31.25
+Branch: םירה- תלייא, Total Time: 113, Total orders: 6, Average Time: 18.833333333333332
+Branch: ןיעידומ, Total Time: 215, Total orders: 13, Average Time: 16.53846153846154
+Branch: הוונ םורמ - ןג תמר, Total Time: 121, Total orders: 7, Average Time: 17.285714285714285
+Branch: ןולקשא, Total Time: 58, Total orders: 3, Average Time: 19.333333333333332
+Branch: הנוי רפכ, Total Time: 136, Total orders: 8, Average Time: 17
+Branch: תינמרג הבשומ - הפיח, Total Time: 228, Total orders: 12, Average Time: 19
+Branch: טהר, Total Time: 224, Total orders: 9, Average Time: 24.88888888888889
+Branch: חרזמ - ןויצל ןושאר, Total Time: 67, Total orders: 5, Average Time: 13.4
+Branch: חרזמ - ןויצל ןושאר, Total Time: 87, Total orders: 6, Average Time: 14.5
+Branch: הריט, Total Time: 100, Total orders: 5, Average Time: 20
+Branch: הנויצ סנ, Total Time: 192, Total orders: 7, Average Time: 27.428571428571427
+Branch: תלייט - תליא, Total Time: 68, Total orders: 3, Average Time: 22.666666666666668
+Branch: ברעמ ןולוח, Total Time: 114, Total orders: 6, Average Time: 19
+Branch: הנוי רפכ, Total Time: 156, Total orders: 9, Average Time: 17.333333333333332
+Branch: אבס רפכ, Total Time: 164, Total orders: 10, Average Time: 16.4
+Branch: םודא ןוינק - תליא, Total Time: 130, Total orders: 6, Average Time: 21.666666666666668
+Branch: הנומיד, Total Time: 52, Total orders: 5, Average Time: 10.4
+Branch: ןוינק - עבש ראב, Total Time: 76, Total orders: 4, Average Time: 19
+Branch: ונוא תירק, Total Time: 175, Total orders: 10, Average Time: 17.5
+Branch: תולעמ, Total Time: 132, Total orders: 5, Average Time: 26.4
+Branch: ברעמ - ןויצל ןושאר, Total Time: 143, Total orders: 7, Average Time: 20.428571428571427
+Branch: ןוסידא קראפ, Total Time: 52, Total orders: 5, Average Time: 10.4
+Branch: הנבי, Total Time: 95, Total orders: 7, Average Time: 13.571428571428571
+Branch: גלופ - הינתנ, Total Time: 97, Total orders: 4, Average Time: 24.25
+Branch: םיאנומשח - ביבא לת, Total Time: 188, Total orders: 9, Average Time: 20.88888888888889
+Branch: הנויצ סנ, Total Time: 201, Total orders: 8, Average Time: 25.125
+Branch: ברעמ - ןויצל ןושאר, Total Time: 149, Total orders: 8, Average Time: 18.625
+Branch: קרב ינב, Total Time: 124, Total orders: 8, Average Time: 15.5
+Branch: ביבא תמר - ביבא לת, Total Time: 45, Total orders: 4, Average Time: 11.25
+Branch: ןוינכט - הפיח, Total Time: 82, Total orders: 5, Average Time: 16.4
+Branch: למרכ לא תילד, Total Time: 85, Total orders: 5, Average Time: 17
+Branch: שמש תיב, Total Time: 170, Total orders: 10, Average Time: 17
+Branch: ללה תיב - םילשורי, Total Time: 131, Total orders: 6, Average Time: 21.833333333333332
+Branch: םודא ןוינק - תליא, Total Time: 140, Total orders: 7, Average Time: 20
+Branch: ןומר הפצמ, Total Time: 156, Total orders: 7, Average Time: 22.285714285714285
+Branch: ןויצ תרשבמ, Total Time: 83, Total orders: 5, Average Time: 16.6
+Branch: תומר - םילשורי, Total Time: 71, Total orders: 4, Average Time: 17.75
+Branch: אבס רפכ, Total Time: 174, Total orders: 11, Average Time: 15.818181818181818
+Branch: טהר, Total Time: 235, Total orders: 10, Average Time: 23.5
+Branch: הניפ שאר, Total Time: 67, Total orders: 4, Average Time: 16.75
+Branch: ןויצ תרשבמ, Total Time: 92, Total orders: 6, Average Time: 15.333333333333334
+Branch: ןוינק - עבש ראב, Total Time: 87, Total orders: 5, Average Time: 17.4
+Branch: הרדג, Total Time: 59, Total orders: 5, Average Time: 11.8
+Branch: הנויצ סנ, Total Time: 206, Total orders: 9, Average Time: 22.88888888888889
+Branch: הבייט, Total Time: 138, Total orders: 7, Average Time: 19.714285714285715
+Branch: דול הלמר, Total Time: 131, Total orders: 6, Average Time: 21.833333333333332
+Branch: ןיעידומ, Total Time: 226, Total orders: 14, Average Time: 16.142857142857142
+Branch: ןוינכט - הפיח, Total Time: 91, Total orders: 6, Average Time: 15.166666666666666
+Branch: הנוי רפכ, Total Time: 170, Total orders: 10, Average Time: 17
+Branch: הילצרה, Total Time: 163, Total orders: 7, Average Time: 23.285714285714285
+Branch: םודא ןוינק - תליא, Total Time: 150, Total orders: 8, Average Time: 18.75
+Branch: לאימרכ, Total Time: 56, Total orders: 5, Average Time: 11.2
+Branch: םחאפ לא םוא, Total Time: 80, Total orders: 6, Average Time: 13.333333333333334
+Branch: םימודא הלעמ, Total Time: 97, Total orders: 6, Average Time: 16.166666666666668
+Branch: שמש תיב, Total Time: 175, Total orders: 11, Average Time: 15.909090909090908
+Branch: תולעמ, Total Time: 142, Total orders: 6, Average Time: 23.666666666666668
+Branch: הרדג, Total Time: 67, Total orders: 6, Average Time: 11.166666666666666
+Branch: הנוי רפכ, Total Time: 176, Total orders: 11, Average Time: 16
+Branch: ישי תמר, Total Time: 122, Total orders: 7, Average Time: 17.428571428571427
+Branch: הנוי רפכ, Total Time: 183, Total orders: 12, Average Time: 15.25
+Branch: דוהי, Total Time: 130, Total orders: 5, Average Time: 26
+Branch: םסק רפכ, Total Time: 106, Total orders: 5, Average Time: 21.2
+Branch: ביבא תמר - ביבא לת, Total Time: 59, Total orders: 5, Average Time: 11.8
+Branch: הננער, Total Time: 141, Total orders: 6, Average Time: 23.5
+Branch: סרפסקא - לאימרכ, Total Time: 202, Total orders: 11, Average Time: 18.363636363636363
+Branch: לייחה תמר - ביבא לת, Total Time: 212, Total orders: 10, Average Time: 21.2
+Branch: הירומ - הפיח, Total Time: 151, Total orders: 9, Average Time: 16.77777777777778
+Branch: הננער, Total Time: 154, Total orders: 7, Average Time: 22
+Branch: ללה תיב - םילשורי, Total Time: 136, Total orders: 7, Average Time: 19.428571428571427
+Branch: דרע, Total Time: 85, Total orders: 4, Average Time: 21.25
+Branch: ןויצ תרשבמ, Total Time: 101, Total orders: 7, Average Time: 14.428571428571429
+Branch: ןוסידא קראפ, Total Time: 68, Total orders: 6, Average Time: 11.333333333333334
+Branch: תוינ - םילשורי, Total Time: 184, Total orders: 11, Average Time: 16.727272727272727
+Branch: דרע, Total Time: 101, Total orders: 5, Average Time: 20.2
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 142, Total orders: 8, Average Time: 17.75
+Branch: הייברג לא הקאב, Total Time: 173, Total orders: 7, Average Time: 24.714285714285715
+Branch: םינג - רפכ הווקת חתפ, Total Time: 83, Total orders: 5, Average Time: 16.6
+Branch: םענקי, Total Time: 241, Total orders: 13, Average Time: 18.53846153846154
+Branch: שירח, Total Time: 58, Total orders: 5, Average Time: 11.6
+Branch: טהר, Total Time: 248, Total orders: 11, Average Time: 22.545454545454547
+Branch: רטנס וליב, Total Time: 103, Total orders: 6, Average Time: 17.166666666666668
+Branch: הניפ שאר, Total Time: 81, Total orders: 5, Average Time: 16.2
+Branch: ןויצ תרשבמ, Total Time: 119, Total orders: 8, Average Time: 14.875
+Branch: הוונ םורמ - ןג תמר, Total Time: 137, Total orders: 8, Average Time: 17.125
+Branch: למרכ לא תילד, Total Time: 97, Total orders: 6, Average Time: 16.166666666666668
+Branch: םייתעבג, Total Time: 88, Total orders: 4, Average Time: 22
+Branch: ונוא תירק, Total Time: 192, Total orders: 11, Average Time: 17.454545454545453
+Branch: ןומר הפצמ, Total Time: 167, Total orders: 8, Average Time: 20.875
+Branch: וכע, Total Time: 66, Total orders: 6, Average Time: 11
+Branch: תורדש, Total Time: 138, Total orders: 8, Average Time: 17.25
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 139, Total orders: 8, Average Time: 17.375
+Branch: תינמרג הבשומ - הפיח, Total Time: 235, Total orders: 13, Average Time: 18.076923076923077
+Branch: חרזמ ןולוח, Total Time: 121, Total orders: 5, Average Time: 24.2
+Branch: ןוינכט - הפיח, Total Time: 100, Total orders: 7, Average Time: 14.285714285714286
+Branch: הנומש - תירק, Total Time: 125, Total orders: 7, Average Time: 17.857142857142858
+Branch: ןאש תיב, Total Time: 137, Total orders: 6, Average Time: 22.833333333333332
+Branch: חרזמ - ןויצל ןושאר, Total Time: 100, Total orders: 7, Average Time: 14.285714285714286
+Branch: ןוסידא קראפ, Total Time: 76, Total orders: 7, Average Time: 10.857142857142858
+Branch: הננער, Total Time: 171, Total orders: 8, Average Time: 21.375
+Branch: ןוינכט - הפיח, Total Time: 115, Total orders: 8, Average Time: 14.375
+Branch: ריעה זכרמ - הינתנ, Total Time: 326, Total orders: 15, Average Time: 21.733333333333334
+Branch: ישי תמר, Total Time: 136, Total orders: 8, Average Time: 17
+Branch: ררמ רפכ, Total Time: 103, Total orders: 5, Average Time: 20.6
+Branch: תרצנ, Total Time: 212, Total orders: 10, Average Time: 21.2
+Branch: ןינכס, Total Time: 6, Total orders: 1, Average Time: 6
+Branch: ןוסנילב - הווקת חתפ, Total Time: 125, Total orders: 6, Average Time: 20.833333333333332
+Branch: דרע, Total Time: 109, Total orders: 6, Average Time: 18.166666666666668
+Branch: הנח סדרפ, Total Time: 280, Total orders: 14, Average Time: 20
+Branch: ןיעידומ, Total Time: 231, Total orders: 15, Average Time: 15.4
+Branch: טפעוש - םילשורי, Total Time: 123, Total orders: 6, Average Time: 20.5
+Branch: רטנס וליב, Total Time: 112, Total orders: 7, Average Time: 16
+Branch: ףיעסי רפכ, Total Time: 107, Total orders: 5, Average Time: 21.4
+Branch: תג תירק, Total Time: 76, Total orders: 6, Average Time: 12.666666666666666
+Branch: החלמ - םילשורי, Total Time: 77, Total orders: 4, Average Time: 19.25
+Branch: ןיקצומ תירק, Total Time: 74, Total orders: 5, Average Time: 14.8
+Branch: םירה- תלייא, Total Time: 134, Total orders: 7, Average Time: 19.142857142857142
+Branch: תומר - םילשורי, Total Time: 88, Total orders: 5, Average Time: 17.6
+Branch: םימודא הלעמ, Total Time: 114, Total orders: 7, Average Time: 16.285714285714285
+Branch: אביקע רוא, Total Time: 105, Total orders: 5, Average Time: 21
+Branch: תולעמ, Total Time: 150, Total orders: 7, Average Time: 21.428571428571427
+Branch: רטנס וליב, Total Time: 122, Total orders: 8, Average Time: 15.25
+Branch: ןוסנילב - הווקת חתפ, Total Time: 134, Total orders: 7, Average Time: 19.142857142857142
+Branch: םי תב, Total Time: 134, Total orders: 7, Average Time: 19.142857142857142
+Branch: ברעמ ןולוח, Total Time: 127, Total orders: 7, Average Time: 18.142857142857142
+Branch: ןינכס, Total Time: 15, Total orders: 2, Average Time: 7.5
+Branch: הירומ - הפיח, Total Time: 161, Total orders: 10, Average Time: 16.1
+Branch: הנומש - תירק, Total Time: 142, Total orders: 8, Average Time: 17.75
+Branch: תרצנ, Total Time: 222, Total orders: 11, Average Time: 20.181818181818183
+Branch: ביבא תמר - ביבא לת, Total Time: 81, Total orders: 6, Average Time: 13.5
+Branch: לבוי תירק - םילשורי, Total Time: 85, Total orders: 5, Average Time: 17
+Branch: ריעה זכרמ - הינתנ, Total Time: 334, Total orders: 16, Average Time: 20.875
+Branch: באז תגספ - םילשורי, Total Time: 88, Total orders: 5, Average Time: 17.6
+Branch: לאימרכ, Total Time: 75, Total orders: 6, Average Time: 12.5
+Branch: הנוי רפכ, Total Time: 197, Total orders: 13, Average Time: 15.153846153846153
+Branch: הניפ שאר, Total Time: 102, Total orders: 6, Average Time: 17
+Branch: אתא תירק, Total Time: 30, Total orders: 3, Average Time: 10
+Branch: םיקפוא, Total Time: 128, Total orders: 5, Average Time: 25.6
+Branch: והילא די - ביבא לת, Total Time: 218, Total orders: 10, Average Time: 21.8
+Branch: הריט, Total Time: 105, Total orders: 6, Average Time: 17.5
+Branch: לייחה תמר - ביבא לת, Total Time: 238, Total orders: 11, Average Time: 21.636363636363637
+Branch: רורד ינב, Total Time: 134, Total orders: 7, Average Time: 19.142857142857142
+Branch: תורדש, Total Time: 159, Total orders: 9, Average Time: 17.666666666666668
+Branch: ןיקריס - הווקת חתפ, Total Time: 77, Total orders: 4, Average Time: 19.25
+Branch: םיאנומשח - ביבא לת, Total Time: 210, Total orders: 10, Average Time: 21
+Branch: הירהנ, Total Time: 84, Total orders: 5, Average Time: 16.8
+Branch: םודא ןוינק - תליא, Total Time: 156, Total orders: 9, Average Time: 17.333333333333332
+Branch: טפעוש - םילשורי, Total Time: 151, Total orders: 7, Average Time: 21.571428571428573
+Branch: תינמרג הבשומ - הפיח, Total Time: 258, Total orders: 14, Average Time: 18.428571428571427
+Branch: הנוי רפכ, Total Time: 198, Total orders: 13, Average Time: 15.23076923076923
+Branch: לאימרכ, Total Time: 69, Total orders: 6, Average Time: 11.5
+Branch: םהוש, Total Time: 157, Total orders: 9, Average Time: 17.444444444444443
+Branch: םימודא הלעמ, Total Time: 136, Total orders: 8, Average Time: 17
+Branch: דודשא, Total Time: 88, Total orders: 7, Average Time: 12.571428571428571
+Branch: תומר - םילשורי, Total Time: 109, Total orders: 6, Average Time: 18.166666666666668
+Branch: הרמס םיחאה ןוינק - םערפש, Total Time: 102, Total orders: 5, Average Time: 20.4
+Branch: הרמס םיחאה ןוינק - םערפש, Total Time: 102, Total orders: 5, Average Time: 20.4
+Branch: לבוי תירק - םילשורי, Total Time: 102, Total orders: 6, Average Time: 17
+Branch: למרכ לא תילד, Total Time: 104, Total orders: 6, Average Time: 17.333333333333332
+Branch: טפעוש - םילשורי, Total Time: 179, Total orders: 8, Average Time: 22.375
+Branch: תינמרג הבשומ - הפיח, Total Time: 281, Total orders: 15, Average Time: 18.733333333333334
+Branch: ןולקשא, Total Time: 70, Total orders: 4, Average Time: 17.5
+Branch: םי תב, Total Time: 152, Total orders: 7, Average Time: 21.714285714285715
+Branch: ונוא תירק, Total Time: 220, Total orders: 12, Average Time: 18.333333333333332
+Branch: הלופע, Total Time: 133, Total orders: 4, Average Time: 33.25
+Branch: תרצנ, Total Time: 224, Total orders: 11, Average Time: 20.363636363636363
+Branch: םיקפוא, Total Time: 145, Total orders: 6, Average Time: 24.166666666666668
+Branch: רטנס וליב, Total Time: 149, Total orders: 9, Average Time: 16.555555555555557
+Branch: תלייט - תליא, Total Time: 83, Total orders: 4, Average Time: 20.75
+Branch: דרע, Total Time: 133, Total orders: 7, Average Time: 19
+Branch: הנבי, Total Time: 115, Total orders: 8, Average Time: 14.375
+Branch: גלופ - הינתנ, Total Time: 110, Total orders: 5, Average Time: 22
+Branch: םי תב, Total Time: 154, Total orders: 7, Average Time: 22
+Branch: הננער, Total Time: 200, Total orders: 9, Average Time: 22.22222222222222
+Branch: הירומ - הפיח, Total Time: 192, Total orders: 11, Average Time: 17.454545454545453
+Branch: רטנס וליב, Total Time: 142, Total orders: 9, Average Time: 15.777777777777779
+Branch: ןויצ תרשבמ, Total Time: 135, Total orders: 9, Average Time: 15
+Branch: ברעמ - ןויצל ןושאר, Total Time: 177, Total orders: 9, Average Time: 19.666666666666668
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 148, Total orders: 9, Average Time: 16.444444444444443
+Branch: הנוי רפכ, Total Time: 207, Total orders: 14, Average Time: 14.785714285714286
+Branch: ןוסידא קראפ, Total Time: 91, Total orders: 8, Average Time: 11.375
+Branch: שירח, Total Time: 78, Total orders: 6, Average Time: 13
+Branch: הנומש - תירק, Total Time: 152, Total orders: 9, Average Time: 16.88888888888889
+Branch: ביבא תמר - ביבא לת, Total Time: 72, Total orders: 6, Average Time: 12
+Branch: הריט, Total Time: 121, Total orders: 7, Average Time: 17.285714285714285
+Branch: הננער, Total Time: 223, Total orders: 10, Average Time: 22.3
+Branch: תינמרג הבשומ - הפיח, Total Time: 289, Total orders: 15, Average Time: 19.266666666666666
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 166, Total orders: 9, Average Time: 18.444444444444443
+Branch: ונוא תירק, Total Time: 226, Total orders: 12, Average Time: 18.833333333333332
+Branch: ןיעידומ, Total Time: 251, Total orders: 16, Average Time: 15.6875
+Branch: םירה- תלייא, Total Time: 167, Total orders: 8, Average Time: 20.875
+Branch: לייחה תמר - ביבא לת, Total Time: 260, Total orders: 12, Average Time: 21.666666666666668
+Branch: ברעמ ןולוח, Total Time: 159, Total orders: 8, Average Time: 19.875
+Branch: ברעמ ןולוח, Total Time: 192, Total orders: 9, Average Time: 21.333333333333332
+Branch: תג תירק, Total Time: 85, Total orders: 7, Average Time: 12.142857142857142
+Branch: הילצרה, Total Time: 196, Total orders: 8, Average Time: 24.5
+Branch: הייברג לא הקאב, Total Time: 202, Total orders: 8, Average Time: 25.25
+Branch: החלמ - םילשורי, Total Time: 110, Total orders: 5, Average Time: 22
+Branch: גלופ - הינתנ, Total Time: 118, Total orders: 5, Average Time: 23.6
+Branch: תומר - םילשורי, Total Time: 99, Total orders: 6, Average Time: 16.5
+Branch: בקעי ןורכז, Total Time: 145, Total orders: 7, Average Time: 20.714285714285715
+Branch: למרכ לא תילד, Total Time: 133, Total orders: 7, Average Time: 19
+Branch: בקעי ןורכז, Total Time: 150, Total orders: 7, Average Time: 21.428571428571427
+Branch: הננער, Total Time: 254, Total orders: 11, Average Time: 23.09090909090909
+Branch: ברעמ - ןויצל ןושאר, Total Time: 209, Total orders: 10, Average Time: 20.9
+Branch: הייברג לא הקאב, Total Time: 232, Total orders: 9, Average Time: 25.77777777777778
+Branch: ןוינכט - הפיח, Total Time: 123, Total orders: 9, Average Time: 13.666666666666666
+Branch: טהר, Total Time: 271, Total orders: 12, Average Time: 22.583333333333332
+Branch: דוהי, Total Time: 136, Total orders: 6, Average Time: 22.666666666666668
+Branch: תובשומה םא - הווקת חתפ, Total Time: 204, Total orders: 9, Average Time: 22.666666666666668
+Branch: גלופ - הינתנ, Total Time: 148, Total orders: 6, Average Time: 24.666666666666668
+Branch: תומר - םילשורי, Total Time: 127, Total orders: 7, Average Time: 18.142857142857142
+Branch: הניפ שאר, Total Time: 140, Total orders: 7, Average Time: 20
+Branch: ןיקריס - הווקת חתפ, Total Time: 105, Total orders: 5, Average Time: 21
+Branch: לאימרכ, Total Time: 100, Total orders: 7, Average Time: 14.285714285714286
+Branch: םענקי, Total Time: 276, Total orders: 14, Average Time: 19.714285714285715
+Branch: תובוחר, Total Time: 87, Total orders: 4, Average Time: 21.75
+Branch: תומר - עבש ראב, Total Time: 78, Total orders: 4, Average Time: 19.5
+Branch: םייתעבג, Total Time: 127, Total orders: 5, Average Time: 25.4
+Branch: דרע, Total Time: 138, Total orders: 7, Average Time: 19.714285714285715
+Branch: הנומיד, Total Time: 65, Total orders: 6, Average Time: 10.833333333333334
+Branch: ףיעסי רפכ, Total Time: 114, Total orders: 6, Average Time: 19
+Branch: ןומר הפצמ, Total Time: 190, Total orders: 9, Average Time: 21.11111111111111
+Branch: הלופע, Total Time: 147, Total orders: 5, Average Time: 29.4
+Branch: תורדש, Total Time: 185, Total orders: 10, Average Time: 18.5
+Branch: םי תב, Total Time: 195, Total orders: 8, Average Time: 24.375
+Branch: הרדג, Total Time: 91, Total orders: 7, Average Time: 13
+Branch: תולעמ, Total Time: 177, Total orders: 8, Average Time: 22.125
+Branch: ןוינק - עבש ראב, Total Time: 117, Total orders: 6, Average Time: 19.5
+Branch: ברעמ - ןויצל ןושאר, Total Time: 218, Total orders: 11, Average Time: 19.818181818181817
+Branch: תרצנ, Total Time: 259, Total orders: 12, Average Time: 21.583333333333332
+Branch: ןוסידא קראפ, Total Time: 101, Total orders: 9, Average Time: 11.222222222222221
+Branch: טפעוש - םילשורי, Total Time: 180, Total orders: 8, Average Time: 22.5
+Branch: דוהי, Total Time: 154, Total orders: 7, Average Time: 22
+Branch: קילאיב ןוינק - ןג תמר, Total Time: 93, Total orders: 6, Average Time: 15.5
+Branch: אבס רפכ, Total Time: 205, Total orders: 12, Average Time: 17.083333333333332
+Branch: תרצנ, Total Time: 284, Total orders: 13, Average Time: 21.846153846153847
+Branch: ןוינק - עבש ראב, Total Time: 130, Total orders: 7, Average Time: 18.571428571428573
+Branch: םיקפוא, Total Time: 159, Total orders: 6, Average Time: 26.5
+Branch: םענקי, Total Time: 319, Total orders: 15, Average Time: 21.266666666666666
+Branch: ררמ רפכ, Total Time: 129, Total orders: 6, Average Time: 21.5
+Branch: םענקי, Total Time: 362, Total orders: 16, Average Time: 22.625
+Branch: תוינ - םילשורי, Total Time: 191, Total orders: 12, Average Time: 15.916666666666666
+Branch: ןיקריס - הווקת חתפ, Total Time: 137, Total orders: 6, Average Time: 22.833333333333332
+Branch: לייחה תמר - ביבא לת, Total Time: 267, Total orders: 13, Average Time: 20.53846153846154
+Branch: קרב ינב, Total Time: 160, Total orders: 9, Average Time: 17.77777777777778
+Branch: תוינ - םילשורי, Total Time: 197, Total orders: 13, Average Time: 15.153846153846153
+Branch: ןויצ תרשבמ, Total Time: 143, Total orders: 9, Average Time: 15.88888888888889
+Branch: הירהנ, Total Time: 89, Total orders: 6, Average Time: 14.833333333333334
+Branch: תומר - םילשורי, Total Time: 165, Total orders: 8, Average Time: 20.625
+Branch: ביבא תמר - ביבא לת, Total Time: 111, Total orders: 7, Average Time: 15.857142857142858
+Branch: הנומיד, Total Time: 76, Total orders: 7, Average Time: 10.857142857142858
+Branch: החלמ - םילשורי, Total Time: 133, Total orders: 6, Average Time: 22.166666666666668
+Branch: ונוא תירק, Total Time: 247, Total orders: 13, Average Time: 19
+Branch: וכע, Total Time: 105, Total orders: 7, Average Time: 15
+Branch: ןאש תיב, Total Time: 171, Total orders: 7, Average Time: 24.428571428571427
+Branch: ןיעידומ, Total Time: 288, Total orders: 17, Average Time: 16.941176470588236
+Branch: אבס רפכ, Total Time: 228, Total orders: 13, Average Time: 17.53846153846154
+Branch: הרדח, Total Time: 106, Total orders: 4, Average Time: 26.5
+Branch: ברעמ ןולוח, Total Time: 221, Total orders: 10, Average Time: 22.1
+Branch: םינג - רפכ הווקת חתפ, Total Time: 94, Total orders: 6, Average Time: 15.666666666666666
+Branch: ןאש תיב, Total Time: 189, Total orders: 8, Average Time: 23.625
+Branch: אתא תירק, Total Time: 63, Total orders: 4, Average Time: 15.75
+Branch: דרע, Total Time: 146, Total orders: 8, Average Time: 18.25
+Branch: םי תב, Total Time: 239, Total orders: 9, Average Time: 26.555555555555557
+Branch: תובשומה םא - הווקת חתפ, Total Time: 232, Total orders: 10, Average Time: 23.2
+Branch: תומר - עבש ראב, Total Time: 111, Total orders: 5, Average Time: 22.2
+Branch: אבס רפכ, Total Time: 262, Total orders: 14, Average Time: 18.714285714285715
+Branch: ביבא תמר - ביבא לת, Total Time: 143, Total orders: 8, Average Time: 17.875
+Branch: ןיעה שאר, Total Time: 137, Total orders: 8, Average Time: 17.125
+Branch: ישי תמר, Total Time: 175, Total orders: 9, Average Time: 19.444444444444443
+Branch: למרכ לא תילד, Total Time: 172, Total orders: 8, Average Time: 21.5
+Branch: לאומש תעבג, Total Time: 144, Total orders: 7, Average Time: 20.571428571428573
+Branch: הנויצ סנ, Total Time: 219, Total orders: 10, Average Time: 21.9
+Branch: לאומש תעבג, Total Time: 168, Total orders: 8, Average Time: 21
+Branch: חרזמ - ןויצל ןושאר, Total Time: 119, Total orders: 8, Average Time: 14.875
+Branch: הניפ שאר, Total Time: 183, Total orders: 8, Average Time: 22.875
+Branch: הירומ - הפיח, Total Time: 206, Total orders: 12, Average Time: 17.166666666666668
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 206, Total orders: 10, Average Time: 20.6
+Branch: תוינ - םילשורי, Total Time: 200, Total orders: 13, Average Time: 15.384615384615385
+Branch: קילאיב ןוינק - ןג תמר, Total Time: 137, Total orders: 7, Average Time: 19.571428571428573
+Branch: םענקי, Total Time: 360, Total orders: 16, Average Time: 22.5
+Branch: גלופ - הינתנ, Total Time: 181, Total orders: 7, Average Time: 25.857142857142858
+Branch: ןוסנילב - הווקת חתפ, Total Time: 139, Total orders: 7, Average Time: 19.857142857142858
+Branch: דוהי, Total Time: 195, Total orders: 8, Average Time: 24.375
+Branch: הנומיד, Total Time: 115, Total orders: 8, Average Time: 14.375
+Branch: םינג - רפכ הווקת חתפ, Total Time: 122, Total orders: 7, Average Time: 17.428571428571427
+Branch: ןומר הפצמ, Total Time: 215, Total orders: 10, Average Time: 21.5
+Branch: תג תירק, Total Time: 123, Total orders: 8, Average Time: 15.375
+Branch: הנבי, Total Time: 129, Total orders: 8, Average Time: 16.125
+Branch: חרזמ - ןויצל ןושאר, Total Time: 149, Total orders: 9, Average Time: 16.555555555555557
+Branch: ףיעסי רפכ, Total Time: 132, Total orders: 7, Average Time: 18.857142857142858
+Branch: ברעמ - ןויצל ןושאר, Total Time: 253, Total orders: 12, Average Time: 21.083333333333332
+Branch: ברעמ - ןויצל ןושאר, Total Time: 276, Total orders: 13, Average Time: 21.23076923076923
+Branch: תורדש, Total Time: 211, Total orders: 11, Average Time: 19.181818181818183
+Branch: חרזמ ןולוח, Total Time: 160, Total orders: 6, Average Time: 26.666666666666668
+Branch: הרמס םיחאה ןוינק - םערפש, Total Time: 113, Total orders: 6, Average Time: 18.833333333333332
+Branch: ערק רפכ, Total Time: 81, Total orders: 5, Average Time: 16.2
+Branch: ףיעסי רפכ, Total Time: 175, Total orders: 8, Average Time: 21.875
+Branch: הנויצ סנ, Total Time: 267, Total orders: 11, Average Time: 24.272727272727273
+Branch: הירבט, Total Time: 53, Total orders: 3, Average Time: 17.666666666666668
+Branch: אביקע רוא, Total Time: 111, Total orders: 6, Average Time: 18.5
+Branch: סרפסקא - לאימרכ, Total Time: 223, Total orders: 12, Average Time: 18.583333333333332
+Branch: לאימרכ, Total Time: 131, Total orders: 8, Average Time: 16.375
+Branch: בקעי ןורכז, Total Time: 193, Total orders: 8, Average Time: 24.125
+Branch: ןוסידא קראפ, Total Time: 120, Total orders: 10, Average Time: 12
+Branch: ןיקריס - הווקת חתפ, Total Time: 152, Total orders: 6, Average Time: 25.333333333333332
+Branch: קרב ינב, Total Time: 155, Total orders: 9, Average Time: 17.22222222222222
+Branch: קילאיב ןוינק - ןג תמר, Total Time: 178, Total orders: 8, Average Time: 22.25
+Branch: הנוי רפכ, Total Time: 241, Total orders: 15, Average Time: 16.066666666666666
+Branch: תורדש, Total Time: 251, Total orders: 12, Average Time: 20.916666666666668
+Branch: החלמ - םילשורי, Total Time: 171, Total orders: 7, Average Time: 24.428571428571427
+Branch: למרכ לא תילד, Total Time: 194, Total orders: 9, Average Time: 21.555555555555557
+Branch: ריעה זכרמ - הינתנ, Total Time: 371, Total orders: 17, Average Time: 21.823529411764707
+Branch: שמש תיב, Total Time: 194, Total orders: 12, Average Time: 16.166666666666668
+Branch: ןורשה דוה, Total Time: 113, Total orders: 5, Average Time: 22.6
+Branch: למרכ לא תילד, Total Time: 216, Total orders: 9, Average Time: 24
+Branch: הילצרה, Total Time: 240, Total orders: 9, Average Time: 26.666666666666668
+Branch: ןורשה תמר, Total Time: 172, Total orders: 6, Average Time: 28.666666666666668
+Branch: ןינכס, Total Time: 62, Total orders: 3, Average Time: 20.666666666666668
+Branch: ןיקצומ תירק, Total Time: 121, Total orders: 6, Average Time: 20.166666666666668
+Branch: תובוחר, Total Time: 133, Total orders: 5, Average Time: 26.6
+Branch: םירה- תלייא, Total Time: 160, Total orders: 8, Average Time: 20
+Branch: הניפ שאר, Total Time: 209, Total orders: 9, Average Time: 23.22222222222222
+Branch: ןינכס, Total Time: 95, Total orders: 4, Average Time: 23.75
+Branch: דודשא, Total Time: 104, Total orders: 7, Average Time: 14.857142857142858
+Branch: ןיקצומ תירק, Total Time: 134, Total orders: 7, Average Time: 19.142857142857142
+Branch: תלייט - תליא, Total Time: 95, Total orders: 4, Average Time: 23.75
+Branch: תוביטנ, Total Time: 173, Total orders: 9, Average Time: 19.22222222222222
+Branch: דרע, Total Time: 193, Total orders: 9, Average Time: 21.444444444444443
+Branch: םי תב, Total Time: 274, Total orders: 10, Average Time: 27.4
+Branch: הירהנ, Total Time: 129, Total orders: 6, Average Time: 21.5
+Branch: םענקי, Total Time: 391, Total orders: 17, Average Time: 23
+Branch: ןוסידא קראפ, Total Time: 128, Total orders: 11, Average Time: 11.636363636363637
+Branch: ישי תמר, Total Time: 181, Total orders: 10, Average Time: 18.1
+Branch: הנומיד, Total Time: 164, Total orders: 9, Average Time: 18.22222222222222
+Branch: הייברג לא הקאב, Total Time: 233, Total orders: 10, Average Time: 23.3
+Branch: םירה- תלייא, Total Time: 162, Total orders: 9, Average Time: 18
+Branch: אבס רפכ, Total Time: 265, Total orders: 15, Average Time: 17.666666666666668
+Branch: תיזכרמ הנחת - םילשורי, Total Time: 213, Total orders: 11, Average Time: 19.363636363636363
+Branch: ברעמ - ןויצל ןושאר, Total Time: 280, Total orders: 14, Average Time: 20
+Branch: ןורשה תמר, Total Time: 179, Total orders: 7, Average Time: 25.571428571428573
+Branch: םודא ןוינק - תליא, Total Time: 166, Total orders: 10, Average Time: 16.6
+Branch: ןיעה שאר, Total Time: 143, Total orders: 9, Average Time: 15.88888888888889
+Branch: ערק רפכ, Total Time: 84, Total orders: 5, Average Time: 16.8
+Branch: םענקי, Total Time: 401, Total orders: 18, Average Time: 22.27777777777778
+Branch: שמש תיב, Total Time: 212, Total orders: 13, Average Time: 16.307692307692307
+Branch: םודא ןוינק - תליא, Total Time: 178, Total orders: 11, Average Time: 16.181818181818183
+Branch: אבס רפכ, Total Time: 270, Total orders: 16, Average Time: 16.875
+Branch: הבייט, Total Time: 145, Total orders: 8, Average Time: 18.125
+Branch: תומר - עבש ראב, Total Time: 120, Total orders: 6, Average Time: 20

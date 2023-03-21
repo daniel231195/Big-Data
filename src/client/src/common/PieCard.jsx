@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Pie } from "react-chartjs-2";
 import styled from "styled-components";
 
