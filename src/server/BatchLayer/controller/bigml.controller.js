@@ -89,7 +89,7 @@ const buildModel = async (req, res) => {
         await makeCSVFile();
     } catch (err) {
         console.log("cannot make csv file ")
-        console.log(error);
+        console.log(err);
     }
     source.create("./orderData.csv", function (error, sourceInfo) {
         if (!error && sourceInfo) {
