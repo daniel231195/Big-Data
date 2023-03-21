@@ -1,20 +1,36 @@
-const Table = (props) => {
-  return (
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Order Received Time</th>
-          <th>Time Of Treatment</th>
-          <th>Topping</th>
-        </tr>
-      </thead>
+import { useEffect } from "react";
+import { Row, RowCell, TableStyled } from "./Table.styled";
 
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+const Table = (props) => {
+  const { headers, data } = props;
+
+  const renderBody = () => {
+    return (
+      data &&
+      data.map(({ antecedents, consequents, support, confidence }, index) => {
+        return (
+          <Row key={`row ${index}`}>
+            <RowCell>{antecedents}</RowCell>
+            <RowCell>{consequents}</RowCell>
+            <RowCell>{parseFloat(support.slice(0, -1)).toFixed(2)}</RowCell>
+            <RowCell>{parseFloat(confidence.slice(0, -1)).toFixed(2)}</RowCell>
+          </Row>
+        );
+      })
+    );
+  };
+
+  useEffect(() => {}, [data]);
+
+  return (
+    <TableStyled>
+      <thead>
+        <Row>
+          {headers && headers.map((header) => <th key={header}>{header}</th>)}
+        </Row>
+      </thead>
+      {renderBody()}
+    </TableStyled>
   );
 };
 export default Table;

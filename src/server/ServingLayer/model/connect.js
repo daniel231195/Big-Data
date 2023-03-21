@@ -61,4 +61,4 @@ redisClient
   }
 })();
 
-module.exports = { elasticClient, redisClient };
+module.exports = { elasticClient, redisClient};
