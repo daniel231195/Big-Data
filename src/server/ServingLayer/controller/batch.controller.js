@@ -14,7 +14,7 @@ const getAssociation = async (req, res) => {
         res.status(200).json(ans.data);
         console.log("end getting Association")
     }catch (error){
-        res.status(400).send("Association filed");
+        res.status(400).send("Association failed");
     }
 
 };

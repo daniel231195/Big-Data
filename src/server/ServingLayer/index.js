@@ -14,6 +14,18 @@ const redisController = require("./controller/redis.controller");
 const kafkaConsumer = require("./model/Kafka");
 const client = require("./model/connect");
 const orderProcess = require("./model/orderProcess");
+const io = require("socket.io")(3004, {
+  cors: {
+    origin: "*",
+  },
+});
+
+io.on("connection", (socket) => {
+  console.log("New client connected");
+})
+  io.on("disconnect", () => {
+    console.log("Client disconnected");
+  });
 
 const elasticClient = client.elasticClient;
 const redisClient = client.redisClient;
@@ -146,6 +158,10 @@ kafkaConsumer.redisConsumer.on("data", async function (data) {
     }
     // console.log(ordersData.carry_time_per_branch);
     await redisClient.json.set("orders_data", ".", ordersData);
+    await redisClient.json.get("orders_data").then((res) => {
+      console.log(res);
+      io.emit("updated-orders", res);
+    });
   } catch (error) {
     console.log("Redis insert error:", error.message);
   }
