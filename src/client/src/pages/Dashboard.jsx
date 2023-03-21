@@ -7,6 +7,7 @@ import GraphCard from "../common/GraphCard";
 import PieCard from "../common/PieCard";
 import SimpleCard from "../common/SimpleCard";
 import PieChart from "../components/PieChart";
+import VerticalBarChart from "../components/VerticalBarChart";
 import { socket } from "../Utils/socket";
 import { DashboardCardsWrapper, DashboardWrapper } from "./Dashboard.styled";
 
@@ -27,7 +28,7 @@ const Dashboard = () => {
 
   socket.on("updated-orders", (message) => {
     setData(message);
-    console.log(message);
+    // console.log(message);
   });
 
   return (
@@ -81,7 +82,6 @@ const Dashboard = () => {
               : ""
           }
         />{" "}
-          
       </DashboardCardsWrapper>
       <DashboardCardsWrapper>
         <SimpleCard header={generalOrders} />
