@@ -1,5 +1,8 @@
 const fs = require("fs");
 const moment = require("moment");
+const { delivered } = require("../../StreamLayer/model/kafka");
+const { total_orders } = require("./dashboard");
+let i = 0;
 
 function deltaTime(startTime, endTime) {
   startTime = parseInt(startTime.replace(":", ""));
@@ -9,7 +12,6 @@ function deltaTime(startTime, endTime) {
   return minDiff >= 60 ? minDiff - 60 : minDiff;
 }
 const processData = (newOrder, ordersData) => {
-  ordersData.total_orders++;
   ordersData = processTotalOpenOrders(newOrder, ordersData);
   ordersData = averageTreatmentTime(newOrder, ordersData);
   ordersData = ordersByDistricts(newOrder, ordersData);
@@ -21,12 +23,38 @@ const processData = (newOrder, ordersData) => {
 };
 
 const toppingProcess = (newOrder, ordersData) => {
-  if (newOrder.topic === "order") {
+  if (newOrder.topic === "order" && newOrder.status !== "delivered") {
+    ordersData.total_orders++;
     for (topping of newOrder.toppings) {
       ordersData.topping_amount[topping]++;
     }
+    i++;
+    if (i % 10 === 0) {
+      ordersData = top5ToppingProcess(newOrder, ordersData);
+    }
   }
   return ordersData;
+};
+
+const top5ToppingProcess = (newOrder, orderData) => {
+  if (newOrder.topic === "order" && newOrder.status !== "delivered") {
+    try {
+      const sortedJson = Object.entries(orderData.topping_amount)
+        .sort(([, a], [, b]) => b - a)
+        .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+
+      let res = sortedJson;
+      orderData.top5Topping = Object.entries(res)
+        .slice(0, 5)
+        .reduce((obj, [key, value]) => {
+          obj[key] = value;
+          return obj;
+        }, {});
+    } catch (err) {
+      console.log("Top5ToppingProcess Function failed: ", err);
+    }
+    return orderData;
+  }
 };
 const top5CarryBranchesProcess = (ordersData) => {
   try {
@@ -42,20 +70,42 @@ const top5CarryBranchesProcess = (ordersData) => {
         obj[key] = value;
         return obj;
       }, {});
+    ordersData = changeKeysToHebrew(ordersData);
   } catch (err) {
     console.log("Top5CarryBranchesProcess Function failed: ", err);
   }
   return ordersData;
 };
+const changeKeysToHebrew = (ordersData) => {
+  pizzaToppingMap = {
+    onion: "לצב",
+    olives: "םיתיז",
+    tomato: "תוינבגע",
+    corn: "סרית",
+    mushrooms: "תוירטפ",
+  };
+  const updatedToppings = {};
+  for (const [key, value] of Object.entries(ordersData.top5Topping)) {
+    const translatedKey = pizzaToppingMap[key] || key; // use the translation map or keep the original key
+    updatedToppings[translatedKey] = value; // update the key in the new object
+  }
+  ordersData.top5Topping = updatedToppings;
+  return ordersData;
+};
 
 const openBranches = (newOrder, ordersData) => {
-  if (newOrder.topic === "event") {
-    if (newOrder.branch_event === "Close") {
-      ordersData.open_branches--;
-    } else {
-      ordersData.open_branches++;
+  try {
+    if (newOrder.topic === "event") {
+      if (newOrder.branch_event === "Close") {
+        ordersData.open_branches--;
+      } else {
+        ordersData.open_branches++;
+      }
     }
+  } catch (err) {
+    console.log(`Open branches problem: ${err}`);
   }
+
   return ordersData;
 };
 
@@ -82,6 +132,7 @@ const averageTreatmentTime = (newOrder, ordersData) => {
   }
   return ordersData;
 };
+
 const ordersPer2Hours = (newOrder, orderData) => {
   if (newOrder.topic === "order" && newOrder.status !== "delivered")
     // Iterate over time ranges
@@ -123,18 +174,6 @@ const branchesTreatmentsByTime = (newOrder, ordersData) => {
     ordersData.carry_time_per_branch[newOrder.branch_name] =
       ordersData.total_time_per_branch[newOrder.branch_name] /
       ordersData.orders_amount_by_branch[newOrder.branch_name];
-    const content = `Branch: ${newOrder.branch_name}, Total Time: ${
-      ordersData.total_time_per_branch[newOrder.branch_name]
-    }, Total orders: ${
-      ordersData.orders_amount_by_branch[newOrder.branch_name]
-    }, Average Time: ${
-      ordersData.carry_time_per_branch[newOrder.branch_name]
-    }\n`;
-    fs.writeFile("logs.txt", content, { flag: "a+" }, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
   }
   ordersData = top5CarryBranchesProcess(ordersData);
   return ordersData;
