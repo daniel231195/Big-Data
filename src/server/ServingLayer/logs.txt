@@ -874,3 +874,4 @@ Branch: הקרי, Total Time: 12, Total orders: 2, Average Time: 6
 Branch: הירבט, Total Time: 83, Total orders: 6, Average Time: 13.833333333333334
 Branch: טפעוש - םילשורי, Total Time: 70, Total orders: 3, Average Time: 23.333333333333332
 Branch: הקרי, Total Time: 18, Total orders: 3, Average Time: 6
+Branch: לדגמ, Total Time: 8, Total orders: 1, Average Time: 8

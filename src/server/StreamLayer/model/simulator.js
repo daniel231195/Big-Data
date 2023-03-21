@@ -27,7 +27,7 @@ function addToping() {
   let i = 0;
   while (topping.length < toppingAmount) {
     let randomIndexToppings = Math.floor(Math.random() * pizzaToppings.length);
-    const newTopping = pizzaInformation.pizzaTopping[randomIndexToppings];
+    const newTopping = pizzaToppings[randomIndexToppings];
     if (topping.indexOf(newTopping) == -1) {
       topping.push(newTopping);
       i++;
