@@ -2,6 +2,7 @@ const fs = require("fs");
 const moment = require("moment");
 const { delivered } = require("../../StreamLayer/model/kafka");
 const { total_orders } = require("./dashboard");
+let i = 0;
 
 function deltaTime(startTime, endTime) {
   startTime = parseInt(startTime.replace(":", ""));
@@ -27,8 +28,11 @@ const toppingProcess = (newOrder, ordersData) => {
     for (topping of newOrder.toppings) {
       ordersData.topping_amount[topping]++;
     }
+    i++;
+    if (i % 10 === 0) {
+      ordersData = top5ToppingProcess(newOrder, ordersData);
+    }
   }
-  ordersData = top5ToppingProcess(newOrder, ordersData);
   return ordersData;
 };
 
@@ -66,20 +70,42 @@ const top5CarryBranchesProcess = (ordersData) => {
         obj[key] = value;
         return obj;
       }, {});
+    ordersData = changeKeysToHebrew(ordersData);
   } catch (err) {
     console.log("Top5CarryBranchesProcess Function failed: ", err);
   }
   return ordersData;
 };
+const changeKeysToHebrew = (ordersData) => {
+  pizzaToppingMap = {
+    onion: "לצב",
+    olives: "םיתיז",
+    tomato: "תוינבגע",
+    corn: "סרית",
+    mushrooms: "תוירטפ",
+  };
+  const updatedToppings = {};
+  for (const [key, value] of Object.entries(ordersData.top5Topping)) {
+    const translatedKey = pizzaToppingMap[key] || key; // use the translation map or keep the original key
+    updatedToppings[translatedKey] = value; // update the key in the new object
+  }
+  ordersData.top5Topping = updatedToppings;
+  return ordersData;
+};
 
 const openBranches = (newOrder, ordersData) => {
-  if (newOrder.topic === "event") {
-    if (newOrder.branch_event === "Close") {
-      ordersData.open_branches--;
-    } else {
-      ordersData.open_branches++;
+  try {
+    if (newOrder.topic === "event") {
+      if (newOrder.branch_event === "Close") {
+        ordersData.open_branches--;
+      } else {
+        ordersData.open_branches++;
+      }
     }
+  } catch (err) {
+    console.log(`Open branches problem: ${err}`);
   }
+
   return ordersData;
 };
 

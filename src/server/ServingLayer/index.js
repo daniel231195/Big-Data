@@ -5,7 +5,7 @@ require("dotenv").config({ path: `${__dirname}/../../../.env` });
 const http = require("http");
 const express = require("express");
 const app = express();
-require('events').EventEmitter.defaultMaxListeners = 15;
+require("events").EventEmitter.defaultMaxListeners = 15;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const batchController = require("./controller/batch.controller");
@@ -23,10 +23,10 @@ const io = require("socket.io")(3004, {
 
 io.on("connection", (socket) => {
   console.log("New client connected");
-})
-  io.on("disconnect", () => {
-    console.log("Client disconnected");
-  });
+});
+io.on("disconnect", () => {
+  console.log("Client disconnected");
+});
 
 const elasticClient = client.elasticClient;
 const redisClient = client.redisClient;
@@ -154,14 +154,24 @@ kafkaConsumer.redisConsumer.on("data", async function (data) {
       }
     }
     if (newOrder.topic === "event") {
-      console.log(`Branch event process ${newOrder}`);
-      ordersData = orderProcess.processData(newOrder, ordersData);
+      try {
+        console.log(`Branch event process ${newOrder.branch_id}`);
+        console.log(newOrder);
+        ordersData = orderProcess.processData(newOrder, ordersData);
+      } catch (err) {
+        console.log(`New event problem:``${err}`);
+      }
     }
+
     // console.log(ordersData.carry_time_per_branch);
     await redisClient.json.set("orders_data", ".", ordersData);
     await redisClient.json.get("orders_data").then((res) => {
-      console.log(res);
-      io.emit("updated-orders", res);
+      // console.log(res);
+      try {
+        io.emit("updated-orders", res);
+      } catch (err) {
+        console.log("Websocket problem:", err);
+      }
     });
   } catch (error) {
     console.log("Redis insert error:", error.message);
