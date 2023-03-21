@@ -1,18 +1,24 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import ProgressBar from "../components/ProgressBar";
+import VerticalBarChart from "../components/VerticalBarChart";
 
-const GraphCard = ({ header, value, icon, data, ...props }) => {
+const GraphCard = ({ header, value, icon, ...props }) => {
+  const [data, setData] = useState(props.data);
+
+  useEffect(() => {
+    if(props.data){
+      // console.log(props.data)
+      const transformedData = Object.entries(props.data).map(([name, value]) => ({ name: name.split("").reverse().join(""), value }));
+      setData(transformedData)
+    }
+  }, [props.data])
+
+
   return (
     <GraphCardWrapper>
       {icon}
       <GraphCardDescription>{header}</GraphCardDescription>
-      {Object.entries(data).map(([key, value]) => (
-        <div key={key}>
-          <div>{key.split("").reverse().join("")}</div>
-          <ProgressBar done={value}/>
-        </div>
-    
-      ))}
+      <VerticalBarChart data={data} />
     </GraphCardWrapper>
   );
 };
