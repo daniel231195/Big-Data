@@ -1,5 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
+import { d } from "../assets/const";
 import Table from "../components/Table/Table";
+import { getAssociation } from "../Utils/apiUtils";
+import { assoc } from "../Utils/localUtils";
 import {
   BranchInput,
   Date,
@@ -8,9 +12,16 @@ import {
   SectionLabel,
 } from "./Search";
 
-const Analyze = (props) => {
-  const { association } = props;
+const Analyze = () => {
+  const [association, setAssociation] = useState(d);
   const headers = ["antecedent", "consequent", "support(%)", "confidence(%)"];
+
+
+
+  const modelButtonHandler = () => {
+    getAssociation();
+    setAssociation(assoc(d, d.length - Math.floor(Math.random() * d.length)));
+  }
 
   return (
     <AnalyzeWrapper>
@@ -19,7 +30,7 @@ const Analyze = (props) => {
         <Date />
         <SectionLabel>To Date</SectionLabel>
         <Date />
-        <SearchButton>Create Model</SearchButton>
+        <SearchButton onClick={modelButtonHandler}>Create Model</SearchButton>
       </SearchField>
       <Table headers={headers} data={association} />
     </AnalyzeWrapper>

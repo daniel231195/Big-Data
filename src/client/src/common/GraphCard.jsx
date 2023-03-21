@@ -8,7 +8,7 @@ const GraphCard = ({ header, value, icon, ...props }) => {
   useEffect(() => {
     if(props.data){
       // console.log(props.data)
-      const transformedData = Object.entries(props.data).map(([name, value]) => ({ name: name.split("").reverse().join(""), value }));
+      const transformedData = Object.entries(props.data).map(([name, value]) => ({ name: name.split("").reverse().join(""), value: value/10 }));
       setData(transformedData)
     }
   }, [props.data])

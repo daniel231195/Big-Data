@@ -7,11 +7,11 @@ const Table = (props) => {
   const renderBody = () => {
     return (
       data &&
-      data.map(({ antecedents, consequents, support, confidence }, index) => {
+      data.map(({ antecedent, consequent, support, confidence }, index) => {
         return (
           <Row key={`row ${index}`}>
-            <RowCell>{antecedents}</RowCell>
-            <RowCell>{consequents}</RowCell>
+            <RowCell>{antecedent}</RowCell>
+            <RowCell>{consequent}</RowCell>
             <RowCell>{parseFloat(support.slice(0, -1)).toFixed(2)}</RowCell>
             <RowCell>{parseFloat(confidence.slice(0, -1)).toFixed(2)}</RowCell>
           </Row>

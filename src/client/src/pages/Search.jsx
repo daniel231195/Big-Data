@@ -2,6 +2,9 @@ import styled from "styled-components";
 import Table from "../components/Table/Table";
 
 const Search = () => {
+
+
+
   return (
     <SearchPageContainer>
       <SearchField>
@@ -11,7 +14,7 @@ const Search = () => {
         <Date />
         <SearchButton>Search</SearchButton>
       </SearchField>
-      <Table />
+      <Table  />
     </SearchPageContainer>
   );
 };
