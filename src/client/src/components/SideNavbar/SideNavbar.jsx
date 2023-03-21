@@ -20,9 +20,6 @@ const SideNavbar = () => {
         <SideNavbarHeader>
           <PizzaIcon />
           <StyledText text="My Pizza Data" color="#919AA4" />
-          <MenuBtn>
-            <MenuIcon />
-          </MenuBtn>
         </SideNavbarHeader>
         <NavbarSectionWrapper>
           <NavbarSection title="Dashboard" icon={<DashboardIcon />} path="/" />

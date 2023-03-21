@@ -21,6 +21,7 @@ export const CardWrapper = styled.div`
   padding: 1em 3em 2em 3em;
   margin: 0em auto;
   background-color: #fff;
+  align-items: center;
   border-radius: 4.2px;
   box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
   gap: 20px;

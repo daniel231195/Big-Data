@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const DashboardWrapper = styled.div`
-    margin-top: 5%;
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 15%;
+    overflow: auto;
+    gap: 10px;
+    justify-content: center;
 `;
 
 export const DashboardCardsWrapper = styled.div`
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
 `;

@@ -72,15 +72,16 @@ const Dashboard = () => {
           header={areaDistribution}
           pieData={
             data.orders_by_districts
-              ? Object.keys(data.orders_by_districts)
+              ? Object.values(data.orders_by_districts)
               : ""
           }
           labels={
             data.orders_by_districts
-              ? Object.values(data.orders_by_districts)
+              ? Object.keys(data.orders_by_districts)
               : ""
           }
         />{" "}
+          
       </DashboardCardsWrapper>
       <DashboardCardsWrapper>
         <SimpleCard header={generalOrders} />
