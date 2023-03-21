@@ -16,7 +16,7 @@ const Search = () => {
   );
 };
 
-const SearchPageContainer = styled.div`
+export const SearchPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,14 +26,14 @@ const SearchPageContainer = styled.div`
   gap: 50px;
 `;
 
-const SearchField = styled.div`
+export const SearchField = styled.div`
   display: flex;
   width: fit-content;
   gap: 10px;
   align-items: center;
 `;
 
-const SectionLabel = styled.div`
+export const SectionLabel = styled.div`
   height: fit-content;
   background: grey;
   border: 1px solid black;
@@ -43,7 +43,7 @@ const SectionLabel = styled.div`
   color: whitesmoke;
 `;
 
-const BranchInput = styled.input`
+export const BranchInput = styled.input`
   height: 30px;
   font-family: "Open Sans";
   font-weight: 500;
@@ -55,7 +55,7 @@ const BranchInput = styled.input`
   cursor: pointer;
 `;
 
-const Date = styled.input.attrs({ type: "date" })`
+export const Date = styled.input.attrs({ type: "date" })`
   height: 30px;
   font-family: "Open Sans";
   font-weight: 500;
@@ -67,7 +67,7 @@ const Date = styled.input.attrs({ type: "date" })`
   cursor: pointer;
 `;
 
-const SearchButton = styled.button`
+export const SearchButton = styled.button`
   font-weight: 500;
   background: grey;
   border-radius: 4px;

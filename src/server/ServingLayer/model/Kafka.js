@@ -3,6 +3,8 @@ const kafkaConf = require("../config/kafka.config");
 
 const orderTopic = process.env.KAFKA_ORDER_TOPIC;
 const deliveredTopic = process.env.KAFKA_DELIVERED_TOPIC;
+const eventTopic = process.env.KAFKA_EVENT_TOPIC;
+
 const elasticConsumer = new Kafka.KafkaConsumer(kafkaConf.kafkaConfigElastic);
 const redisConsumer = new Kafka.KafkaConsumer(kafkaConf.kafkaConfigRedis);
 
@@ -25,7 +27,7 @@ elasticConsumer
 redisConsumer
   .on("ready", function () {
     console.log("Redis consumer ready");
-    redisConsumer.subscribe([orderTopic, deliveredTopic]);
+    redisConsumer.subscribe([orderTopic, deliveredTopic, eventTopic]);
     redisConsumer.consume();
   })
   .on("disconnected", (arg) => {

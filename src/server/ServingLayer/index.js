@@ -10,11 +10,26 @@ const bodyParser = require("body-parser");
 const batchController = require("./controller/batch.controller");
 const streamController = require("./controller/stream.controller");
 const elasticController = require("./controller/elastic.controller");
-// const kafkaConsumer = require("./model/Kafka");
+const redisController = require("./controller/redis.controller");
+const kafkaConsumer = require("./model/Kafka");
 const client = require("./model/connect");
+const orderProcess = require("./model/orderProcess");
+const io = require("socket.io")(3004, {
+  cors: {
+    origin: "*",
+  },
+});
+
+io.on("connection", (socket) => {
+  console.log("New client connected");
+})
+  io.on("disconnect", () => {
+    console.log("Client disconnected");
+  });
 
 const elasticClient = client.elasticClient;
 const redisClient = client.redisClient;
+
 const port = process.env.PORT || 3002;
 
 const server = http.createServer(app);
@@ -35,14 +50,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
  */
 app
   .get("/", (req, res) => res.send("Hello World!"))
-  .get("/batch/getAssociation", batchController.getAssociation);
-//     .get("/stream", )
-/**
- * @deletion method for deleting specific topics from elasticsearch host.
- * example: http://localhost:3001/es/<existing topic>
- * @param {indexName}
- */
-app
+  .get("/batch/getAssociation", batchController.getAssociation)
+  .get("/api/getAllOrders", redisController.getAllOrders)
+  .delete("/api/deleteKey/:key", redisController.deleteSpecificKey)
+  //     .get("/stream", )
+  /**
+   * @deletion method for deleting specific topics from elasticsearch host.
+   * example: http://localhost:3001/es/<existing topic>
+   * @param {indexName}
+   */
+
   .delete("/es/delete/:indexName", elasticController.deleteIndex)
   /**
    * @GET method for searching particular an order ID from particular index using routs
@@ -60,43 +77,33 @@ app
     elasticController.searchBranchIdDate
   );
 
-
-function packOrder(message) {
-  const order = {
-    order_id: message.order_id,
-    branch_id: message.branch_id,
-    branch_name: message.branch_name,
-    district: message.district,
-    order_status: message.order_status,
-    order_date: message.order_date,
-    order_time: message.order_time,
-    order_served_time: message.order_served_time,
-    toppings: message.toppings,
-    branch_open: message.branch_open,
-    branch_close: message.branch_close,
-    topic: message.topic,
-  };
-  return order;
-}
-kafkaConsumer.redisConsumer.on("data", async function (data) {
-  const message = JSON.parse(data.value.toString());
-  if (message.topic === "order") {
-    const order = packOrder(message);
-    let order_data = await redisClient.redis.json.GET("order_data")
-    order_data =  processData()
-  }
-});
+// function packOrder(message) {
+//   const order = {
+//     order_id: message.order_id,
+//     branch_id: message.branch_id,
+//     branch_name: message.branch_name,
+//     district: message.district,
+//     order_status: message.order_status,
+//     order_date: message.order_date,
+//     order_time: message.order_time,
+//     order_served_time: message.order_served_time,
+//     toppings: message.toppings,
+//     branch_open: message.branch_open,
+//     branch_close: message.branch_close,
+//     topic: message.topic,
+//   };
+//   return order;
+// }
 
 kafkaConsumer.elasticConsumer.on("data", async function (data) {
-  const message = JSON.parse(data.value.toString());
+  const message = JSON.parse(data.value);
   if (message.topic === "order") {
-    const order = packOrder(message);
     try {
       await elasticClient.index({
         index: "order",
         id: message.order_id.toString(),
         body: {
-          ...order,
+          ...message,
         },
       });
       console.log(
@@ -128,10 +135,58 @@ kafkaConsumer.elasticConsumer.on("data", async function (data) {
     }
   }
 });
+
+kafkaConsumer.redisConsumer.on("data", async function (data) {
+  const newOrder = JSON.parse(data.value);
+  // console.log(newOrder);
+  try {
+    let ordersData = await redisClient.json.get("orders_data");
+    if (newOrder.topic === "order") {
+      ordersData = orderProcess.processData(newOrder, ordersData);
+      await redisClient.json.arrInsert("All_orders", ".", 0, newOrder);
+      console.log(`Insert new order ${newOrder.order_id} to redis`);
+    }
+    if (newOrder.topic === "delivered") {
+      const allOrders = await redisClient.json.get("All_orders");
+      const index = await allOrders.findIndex(
+        (order) => order.order_id === newOrder.order_id
+      );
+      if (index > -1) {
+        await redisClient.json.set(
+          "All_orders",
+          `.[${index}].order_status`,
+          newOrder.topic
+        );
+        await redisClient.json.set(
+          "All_orders",
+          `.[${index}].order_served_time`,
+          newOrder.served_time
+        );
+        let delivered = await redisClient.json.get("All_orders", `.[${index}]`);
+        if (delivered) {
+          // console.log(delivered[index]);
+          ordersData = orderProcess.processData(delivered[index], ordersData);
+          console.log(`Updated delivered order ${delivered[index].order_id}`);
+        }
+      }
+    }
+    if (newOrder.topic === "event") {
+      console.log(`Branch event process ${newOrder}`);
+      ordersData = orderProcess.processData(newOrder, ordersData);
+    }
+    // console.log(ordersData.carry_time_per_branch);
+    await redisClient.json.set("orders_data", ".", ordersData);
+    await redisClient.json.get("orders_data").then((res) => {
+      console.log(res);
+      io.emit("updated-orders", res);
+    });
+  } catch (error) {
+    console.log("Redis insert error:", error.message);
+  }
+});
 /**
  * Start Server on port 3002
  */
-
 
 server.listen(port, () =>
   console.log("Serving Layer started at http://localhost:%d", port)

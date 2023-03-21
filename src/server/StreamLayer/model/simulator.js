@@ -10,7 +10,6 @@ let maxTime;
 
 let generateOrders = true;
 
-
 function stopGeneratingOrders() {
   generateOrders = false;
 }
@@ -29,8 +28,8 @@ function addToping() {
   while (topping.length < toppingAmount) {
     let randomIndexToppings = Math.floor(Math.random() * pizzaToppings.length);
     const newTopping = pizzaInformation.pizzaTopping[randomIndexToppings];
-    if (topping.indexOf(reverse(newTopping)) == -1) {
-      topping.push(reverse(newTopping));
+    if (topping.indexOf(newTopping) == -1) {
+      topping.push(newTopping);
       i++;
     }
   }
@@ -71,7 +70,7 @@ function generateOrder(orderCount) {
     topic: "order",
   };
 }
-function orderDelivered2(orderId) {
+function orderDelivered(orderId) {
   const delivered = {
     order_id: orderId,
     served_time: currentHour(),
@@ -80,60 +79,34 @@ function orderDelivered2(orderId) {
   console.log(delivered);
   producer.delivered(delivered);
 }
-function orderDelivered(orderPool) {
-  let randomDeliveredSeed = Math.floor(Math.random() * (orderPool.length - 3));
-  orderId = orderPool[randomDeliveredSeed];
-  orderPool.splice(randomDeliveredSeed, 1);
-  return {
-    order_id: orderId,
-    served_time: currentHour(),
-    topic: "delivered",
-  };
-}
-let i = 0;
-maxDeliveredTime = 10;
-let index = 0;
-let orderPool = [];
-let timeToDeliver = Math.floor(Math.random() * maxDeliveredTime) + 5;
 
-function intervalFunction() {
-  let order = generateOrder(i);
-  orderPool.push(order.order_id);
-  if (i > timeToDeliver) {
-    let deliveredAmount = Math.floor(Math.random() * orderPool.length);
-    index = 0;
-    while (orderPool.length > 10 && index < deliveredAmount) {
-      console.log(
-        "******************************* ORDER DELIVERED ************************************************"
-      );
-      let delivered = orderDelivered(orderPool);
-      console.log(delivered);
-      producer.delivered(delivered);
-      index++;
-    }
-    timeToDeliver = Math.floor(Math.random() * maxDeliveredTime) + 5;
-    index = 0;
-    i = 0;
-  }
-  // orderCount++;
-  console.log("Inserted order: ", order.order_id);
-  producer.publish(order);
-  i++;
-}
 function generateRandomTime(min, max) {
   minTime = min * 60 * 1000; // 5 minutes in milliseconds
   maxTime = max * 60 * 1000; // 50 minutes in milliseconds
   return Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
 }
+function isBranchOpen(branchId) {
+  jsonBranch = pizzaBranches.find((t) => t.branch_id === branchId);
+  return jsonBranch.branchOpen === "Open";
+}
+function findMyBranch(branchId) {
+  const index = pizzaBranches.findIndex((t) => t.branch_id === branchId);
+  return index;
+}
+function updateBranch(branchEvent, index) {
+  pizzaBranches[index].branchOpen = branchEvent.branch_event;
+}
 
-function intervalFunction2(i, callback) {
+function intervalFunction(i, callback) {
   let order = null;
   let deliveryDelay = maxTime;
   if (generateOrders === true) {
     order = generateOrder(i);
-    console.log(`Order ${order.order_id} is being prepared`);
-    producer.publish(order);
-    deliveryDelay = generateRandomTime(5, 50); // random delay between 5 to 50 minutes in milliseconds
+    if (isBranchOpen(order.branch_id)) {
+      console.log(`Order ${order.order_id} is being prepared`);
+      producer.publish(order);
+      deliveryDelay = generateRandomTime(5, 50); // random delay between 5 to 50 minutes in milliseconds
+    }
   }
   setTimeout(() => {
     if (order !== null) {
@@ -141,13 +114,29 @@ function intervalFunction2(i, callback) {
       callback(order.order_id);
     }
   }, deliveryDelay);
+  branchEvent = generateBranchEvent();
+  let index = findMyBranch(branchEvent.branch_id);
+  if (pizzaBranches[index].branchOpen !== branchEvent.branch_event) {
+    updateBranch(branchEvent, index);
+    producer.event(branchEvent);
+  }
+}
+
+function generateBranchEvent() {
+  let randomIndexBranches = Math.floor(Math.random() * pizzaBranches.length);
+  let randomEvent = Math.random(0, 1) > 0.2 ? "Open" : "Close";
+  return {
+    branch_id: pizzaBranches[randomIndexBranches].branch_id,
+    branch_event: randomEvent,
+    topic: "event",
+  };
 }
 
 module.exports = {
+  generateBranchEvent,
   generateOrder,
   intervalFunction,
-  intervalFunction2,
-  orderDelivered2,
+  orderDelivered,
   startGeneratingOrders,
   stopGeneratingOrders,
 };
