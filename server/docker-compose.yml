@@ -1,0 +1,41 @@
+---
+version: "3.7"
+services:
+  elasticsearch:
+    image: docker.io/bitnami/elasticsearch:8
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - "elasticsearch_data:/bitnami/elasticsearch/data"
+
+  # http://localhost:5601
+  kibana:
+    image: docker.io/bitnami/kibana:8
+    ports:
+      - "5601:5601"
+    volumes:
+      - "kibana_data:/bitnami/kibana"
+    depends_on:
+      - elasticsearch
+
+  redis:
+    image: redis/redis-stack:latest
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - "6379:6379"
+    # command: ["redis-server", "/opt/bitnami/redis/conf/redis.conf"]
+    volumes:
+      - "redis_data:/redis/data"
+      # - "./redis.conf:/opt/bitnami/redis/conf/redis.conf"
+
+volumes:
+  elasticsearch_data:
+    driver: local
+  kibana_data:
+    driver: local
+  redis_data:
+    driver: local
