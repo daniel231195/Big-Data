@@ -3,10 +3,7 @@ import { startSimulator, stopSimulator } from "../simulation/simulation.js";
 
 const router = express.Router();
 
-/**
- * Routes
- */
-router.post("/startSimulation", startSimulator);
-router.post("/stopSimulation", stopSimulator);
+router.post("/start", startSimulator);
+router.post("/stop", stopSimulator);
 
 export default router;

@@ -45,3 +45,12 @@ export const elasticListener = () => {
     }
   });
 };
+export async function deleteElasticCollections() {
+  try {
+    elasticClient.indices.delete({
+      index: "order",
+    });
+  } catch (error) {
+    console.log("Error with delete all the elastic indices: ", error);
+  }
+}

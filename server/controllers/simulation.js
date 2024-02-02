@@ -5,11 +5,15 @@ import {
   event,
   simulation,
 } from "../kafka/producer.js";
-import { pizzaToppings, pizzaBranches } from "./dataGenerator.js";
+import { pizzaToppings, pizzaBranches } from "../simulation/dataGenerator.js";
 import dotenv from "dotenv";
 dotenv.config();
 import { v4 as uuid } from "uuid";
-import { maxTreatmentTime, minTreatmentTime } from "./simulation.js";
+import {
+  maxTreatmentTime,
+  minTreatmentTime,
+} from "../simulation/simulation.js";
+import { getOrderServeTime } from "./orders.js";
 
 let generateOrders = true;
 export const SIMULATION_STOPPED = "Simulation Stopped";
@@ -18,10 +22,6 @@ export const stopGeneratingOrders = () => {
 };
 export const startGeneratingOrders = () => {
   generateOrders = true;
-};
-
-const reverse = (s) => {
-  return [...s].reverse().join("");
 };
 
 const addToping = () => {
@@ -39,8 +39,17 @@ const addToping = () => {
   return topping;
 };
 
-const currentHour = () => {
-  var now = new Date();
+function generateRandomDate() {
+  const to = new Date();
+  const from = new Date();
+  from.setHours(9, 30, 0);
+  to.setHours(22, 30, 0);
+  return currentHour(
+    new Date(from.getTime() + Math.random() * (to.getTime() - from.getTime()))
+  );
+}
+
+const currentHour = (now) => {
   var hours = now.getHours();
   var minutes = now.getMinutes();
   var myTime = ("0000" + (hours * 100 + minutes)).slice(-4);
@@ -65,7 +74,7 @@ const generateOrder = (orderCount) => {
     district: pizzaBranches[randomIndexBranches].district,
     orderStatus: "pending",
     orderDate: formatDate(new Date(), "dd/mm/yyyy"),
-    orderTime: currentHour(),
+    orderTime: generateRandomDate(),
     orderServedTime: "",
     toppings: addToping(),
     branchOpen: pizzaBranches[randomIndexBranches].openTime,
@@ -73,7 +82,8 @@ const generateOrder = (orderCount) => {
     topic: "order",
   };
 };
-export const orderDelivered = (orderId) => {
+export const orderDelivered = async (orderId, deliveryDelay) => {
+  const orderTime = await getOrderServeTime(orderId);
   const deliver = {
     orderId: orderId,
     servedTime: currentHour(),
@@ -114,7 +124,7 @@ export const intervalFunction = (callback) => {
   setTimeout(() => {
     if (order !== null) {
       console.log(`Order ${order.orderId} has been delivered`);
-      callback(order.orderId);
+      callback(order.orderId, deliveryDelay);
     }
   }, deliveryDelay);
   const branchEvent = generateBranchEvent();
@@ -130,6 +140,7 @@ export const generateBranchEvent = () => {
   let randomEvent = Math.random(0, 1) > 0.2 ? "Open" : "Close";
   return {
     branchId: pizzaBranches[randomIndexBranches].branchId,
+    branchName: pizzaBranches[randomIndexBranches].branchName,
     branchEvent: randomEvent,
     topic: "event",
   };

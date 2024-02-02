@@ -13,8 +13,7 @@ redisClient
     console.log("Receiver connected to Redis");
   });
 
-(async () => {
-  await redisClient.connect();
+export async function initRedis() {
   // RedisJSON uses JSON Path syntax. '.' is the root.
   const allOrders = await redisClient.exists("allOrders");
   const ordersData = await redisClient.exists("ordersData");
@@ -29,5 +28,5 @@ redisClient
     console.log("Creating:", await redisClient.json.GET("ordersData"));
     console.log("Creating:", await redisClient.json.GET("allOrders"));
   }
-})();
+}
 export default redisClient;

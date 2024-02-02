@@ -47,8 +47,9 @@ export const handleDelivered = async (newOrder, ordersData, allOrders) => {
   }
 };
 
-export const handleEvent = async (order, ordersData) => {
-  await openBranches(order, ordersData);
+export const handleEvent = async (event, ordersData) => {
+  await openBranches(event, ordersData);
+  await eventMessage(event, ordersData);
 };
 
 export const updateOrdersDataArray = async (ordersData, multi) => {
@@ -165,7 +166,13 @@ const changeKeysToHebrew = (ordersData) => {
   ordersData.top5Topping = updatedToppings;
   return ordersData;
 };
-
+export const eventMessage = (event, ordersData) => {
+  console.log(event);
+  ordersData.lastEvent = {
+    branchName: event.branchName,
+    branchEvent: event.branchEvent,
+  };
+};
 export const openBranches = async (newOrder, ordersData) => {
   try {
     if (newOrder.branchEvent === "Close") {

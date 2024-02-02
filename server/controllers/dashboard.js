@@ -6,7 +6,7 @@ import processData, {
   updateOrdersDataArray,
   handleEvent,
 } from "../models/OrderProcess.js";
-import { SIMULATION_STOPPED } from "../simulation/simulationUtils.js";
+import { SIMULATION_STOPPED } from "./simulation.js";
 export const deliveredProcess = async (order, ordersData, allOrders) => {
   await handleDelivered(order, ordersData, allOrders);
 };
@@ -109,16 +109,14 @@ export const deleteSpecificKey = async (req, res) => {
     return res.status(404).json({ error: err.message });
   }
 };
-export const deleteAllKeys = async (req, res) => {
+export const deleteAllKeys = async () => {
   try {
     const keys = await redisClient.keys("*");
-    console.log(keys);
     for (const key of keys) {
       await redisClient.del(key);
     }
-    res.status(200).json({ status: "succeed" });
   } catch (error) {
-    res.status(404).json({ error: error });
+    console.error("Failed to delete Redis keys", error);
   }
 };
 

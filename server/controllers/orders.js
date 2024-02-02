@@ -4,6 +4,25 @@ import dotenv from "dotenv";
 import Order from "../models/Order.js";
 dotenv.config();
 
+export async function getOrderServeTime(orderId) {
+  try {
+    const order = await Order.find(
+      {
+        orderId : orderId
+      }
+    )
+    if (!order) {
+      console.error(`Order with ID ${orderId} not found`);
+      return null; // Or you can throw an error here if you prefer
+    }
+
+    console.log(order);
+    return order;
+  } catch (error) {
+    console.error(error.message);
+    throw error; // Rethrow the error so it can be handled further up the call stack
+  }
+}
 async function markOrderAsReady(orderId, servedTime) {
   try {
     console.log(servedTime);
@@ -30,7 +49,7 @@ export const mongoListener = () => {
           );
         })
         .catch((err) => {
-          console.log(err);
+          console.error(err);
         });
     } else if (message.topic === "delivered") {
       markOrderAsReady(message.orderId, message.servedTime);

@@ -7,11 +7,11 @@ export const ordersValues = {
   openBranches: 100,
 
   ordersByDistricts: {
-    חיפה: 0,
-    דן: 0,
-    דרום: 0,
-    מרכז: 0,
-    צפון: 0,
+    Haifa: 0,
+    Dan: 0,
+    South: 0,
+    Center: 0,
+    North: 0,
   },
 
   carryTimePerBranch: {
@@ -29,11 +29,11 @@ export const ordersValues = {
   deliveredOrdersByBranch: {},
 
   toppingAmount: {
-    onion: 0,
-    olives: 0,
-    tomato: 0,
-    corn: 0,
-    mushrooms: 0,
+    Onions: 0,
+    Olives: 0,
+    Tomato: 0,
+    Corn: 0,
+    Mushrooms: 0,
   },
   top5Topping: {},
   top5CarryBranches: {},
@@ -48,7 +48,9 @@ export const ordersValues = {
     "20:00 - 22:00": 0,
     "22:00 - 23:59": 0,
   },
+  lastEvent: {},
 };
+
 // {
 //   "חיפה - טכניון": 1,
 //   "באר שבע - רמות": 0,

@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 export const kafkaConfigRedis = {
   "group.id": process.env.GROUP_ID_REDIS,
   "metadata.broker.list": process.env.CLOUDKARAFKA_BROKERS.split(","),

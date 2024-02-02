@@ -2,7 +2,7 @@ export const pizzaBranches = [
   {
     branchId: "1",
     branchName: "אום אל פאחם",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -10,7 +10,7 @@ export const pizzaBranches = [
   {
     branchId: "2",
     branchName: "אופקים",
-    district: "דרום",
+    district: "South",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -18,7 +18,7 @@ export const pizzaBranches = [
   {
     branchId: "3",
     branchName: "אור עקיבא",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -26,7 +26,7 @@ export const pizzaBranches = [
   {
     branchId: "4",
     branchName: "אילת - טיילת",
-    district: "דרום",
+    district: "South",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -34,7 +34,7 @@ export const pizzaBranches = [
   {
     branchId: "5",
     branchName: "איילת -הרים",
-    district: "דרום",
+    district: "South",
     openTime: "10:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -42,7 +42,7 @@ export const pizzaBranches = [
   {
     branchId: "6",
     branchName: "אילת - קניון אדום",
-    district: "דרום",
+    district: "South",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -50,7 +50,7 @@ export const pizzaBranches = [
   {
     branchId: "7",
     branchName: "אשדוד",
-    district: "דרום",
+    district: "South",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -58,7 +58,7 @@ export const pizzaBranches = [
   {
     branchId: "8",
     branchName: "אשקלון",
-    district: "דרום",
+    district: "South",
     openTime: "11:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -66,7 +66,7 @@ export const pizzaBranches = [
   {
     branchId: "9",
     branchName: "באקה אל גרבייה",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -74,7 +74,7 @@ export const pizzaBranches = [
   {
     branchId: "10",
     branchName: "באר שבע - רמות",
-    district: "דרום",
+    district: "South",
     openTime: "09:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -82,7 +82,7 @@ export const pizzaBranches = [
   {
     branchId: "11",
     branchName: "באר שבע - קניון",
-    district: "דרום",
+    district: "South",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -90,7 +90,7 @@ export const pizzaBranches = [
   {
     branchId: "12",
     branchName: "באר שבע - אביסרור",
-    district: "דרום",
+    district: "South",
     openTime: "10:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -98,7 +98,7 @@ export const pizzaBranches = [
   {
     branchId: "13",
     branchName: "בילו סנטר",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -106,7 +106,7 @@ export const pizzaBranches = [
   {
     branchId: "14",
     branchName: "בית שאן",
-    district: "צפון",
+    district: "North",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -114,7 +114,7 @@ export const pizzaBranches = [
   {
     branchId: "15",
     branchName: "בית שמש",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -122,7 +122,7 @@ export const pizzaBranches = [
   {
     branchId: "16",
     branchName: "בני ברק",
-    district: "דן",
+    district: "Dan",
     openTime: "10:30",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -130,7 +130,7 @@ export const pizzaBranches = [
   {
     branchId: "18",
     branchName: "בת ים",
-    district: "דן",
+    district: "Dan",
     openTime: "11:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -138,7 +138,7 @@ export const pizzaBranches = [
   {
     branchId: "19",
     branchName: "גבעת שמואל",
-    district: "דן",
+    district: "Dan",
     openTime: "09:30",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -146,7 +146,7 @@ export const pizzaBranches = [
   {
     branchId: "20",
     branchName: "גדרה",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -154,7 +154,7 @@ export const pizzaBranches = [
   {
     branchId: "21",
     branchName: "קרית אונו",
-    district: "דן",
+    district: "Dan",
     openTime: "11:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -162,7 +162,7 @@ export const pizzaBranches = [
   {
     branchId: "22",
     branchName: "בני דרור",
-    district: "דן",
+    district: "Dan",
     openTime: "10:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -170,7 +170,7 @@ export const pizzaBranches = [
   {
     branchId: "23",
     branchName: "דלית אל כרמל",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -178,7 +178,7 @@ export const pizzaBranches = [
   {
     branchId: "24",
     branchName: "דימונה",
-    district: "דרום",
+    district: "South",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -186,7 +186,7 @@ export const pizzaBranches = [
   {
     branchId: "25",
     branchName: "הוד השרון",
-    district: "דן",
+    district: "Dan",
     openTime: "09:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -194,7 +194,7 @@ export const pizzaBranches = [
   {
     branchId: "26",
     branchName: "זכרון יעקב",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -202,7 +202,7 @@ export const pizzaBranches = [
   {
     branchId: "27",
     branchName: "הרצליה",
-    district: "דן",
+    district: "Dan",
     openTime: "10:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -210,7 +210,7 @@ export const pizzaBranches = [
   {
     branchId: "28",
     branchName: "חדרה",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -218,7 +218,7 @@ export const pizzaBranches = [
   {
     branchId: "29",
     branchName: "חולון מזרח",
-    district: "דן",
+    district: "Dan",
     openTime: "11:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -226,7 +226,7 @@ export const pizzaBranches = [
   {
     branchId: "30",
     branchName: "חולון מערב",
-    district: "דן",
+    district: "Dan",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -234,7 +234,7 @@ export const pizzaBranches = [
   {
     branchId: "31",
     branchName: "חיפה - טכניון",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -242,7 +242,7 @@ export const pizzaBranches = [
   {
     branchId: "32",
     branchName: "חיפה - מוריה",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -250,7 +250,7 @@ export const pizzaBranches = [
   {
     branchId: "33",
     branchName: "חיפה - מושבה גרמנית",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -258,7 +258,7 @@ export const pizzaBranches = [
   {
     branchId: "34",
     branchName: "חריש",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -266,7 +266,7 @@ export const pizzaBranches = [
   {
     branchId: "35",
     branchName: "טבריה",
-    district: "צפון",
+    district: "North",
     openTime: "10:30",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -274,7 +274,7 @@ export const pizzaBranches = [
   {
     branchId: "36",
     branchName: "טייבה",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -282,7 +282,7 @@ export const pizzaBranches = [
   {
     branchId: "37",
     branchName: "טירה",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -290,7 +290,7 @@ export const pizzaBranches = [
   {
     branchId: "38",
     branchName: "יבנה",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -298,7 +298,7 @@ export const pizzaBranches = [
   {
     branchId: "39",
     branchName: "יהוד",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -306,7 +306,7 @@ export const pizzaBranches = [
   {
     branchId: "40",
     branchName: "יקנעם",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -314,7 +314,7 @@ export const pizzaBranches = [
   {
     branchId: "41",
     branchName: "ירושלים - בית הלל",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -322,7 +322,7 @@ export const pizzaBranches = [
   {
     branchId: "42",
     branchName: "ירושלים - מלחה",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -330,7 +330,7 @@ export const pizzaBranches = [
   {
     branchId: "43",
     branchName: "ירושלים - ניות",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -338,7 +338,7 @@ export const pizzaBranches = [
   {
     branchId: "44",
     branchName: "ירושלים - פסגת זאב",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -346,7 +346,7 @@ export const pizzaBranches = [
   {
     branchId: "45",
     branchName: "ירושלים - רמות",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -354,7 +354,7 @@ export const pizzaBranches = [
   {
     branchId: "46",
     branchName: "ירושלים - שועפט",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -362,7 +362,7 @@ export const pizzaBranches = [
   {
     branchId: "47",
     branchName: "ירושלים - תחנה מרכזית",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -370,7 +370,7 @@ export const pizzaBranches = [
   {
     branchId: "48",
     branchName: "ירקה",
-    district: "צפון",
+    district: "North",
     openTime: "09:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -378,7 +378,7 @@ export const pizzaBranches = [
   {
     branchId: "49",
     branchName: "כפר יסעיף",
-    district: "צפון",
+    district: "North",
     openTime: "09:30",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -386,7 +386,7 @@ export const pizzaBranches = [
   {
     branchId: "50",
     branchName: "כפר יונה",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -394,7 +394,7 @@ export const pizzaBranches = [
   {
     branchId: "51",
     branchName: "כפר מרר",
-    district: "צפון",
+    district: "North",
     openTime: "11:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -402,7 +402,7 @@ export const pizzaBranches = [
   {
     branchId: "52",
     branchName: "כפר סבא",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -410,7 +410,7 @@ export const pizzaBranches = [
   {
     branchId: "53",
     branchName: "כפר קסם",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -418,7 +418,7 @@ export const pizzaBranches = [
   {
     branchId: "54",
     branchName: "כפר קרע",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -426,7 +426,7 @@ export const pizzaBranches = [
   {
     branchId: "55",
     branchName: "כרמיאל",
-    district: "צפון",
+    district: "North",
     openTime: "09:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -434,7 +434,7 @@ export const pizzaBranches = [
   {
     branchId: "56",
     branchName: "כרמיאל - אקספרס",
-    district: "צפון",
+    district: "North",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -442,7 +442,7 @@ export const pizzaBranches = [
   {
     branchId: "57",
     branchName: "מבשרת ציון",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -450,7 +450,7 @@ export const pizzaBranches = [
   {
     branchId: "58",
     branchName: "מגדל",
-    district: "צפון",
+    district: "North",
     openTime: "10:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -458,7 +458,7 @@ export const pizzaBranches = [
   {
     branchId: "59",
     branchName: "גבעתיים",
-    district: "דן",
+    district: "Dan",
     openTime: "10:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -466,7 +466,7 @@ export const pizzaBranches = [
   {
     branchId: "60",
     branchName: "מודיעין",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -474,7 +474,7 @@ export const pizzaBranches = [
   {
     branchId: "61",
     branchName: "מעלה אדומים",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -482,7 +482,7 @@ export const pizzaBranches = [
   {
     branchId: "61",
     branchName: "מעלות",
-    district: "צפון",
+    district: "North",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -490,7 +490,7 @@ export const pizzaBranches = [
   {
     branchId: "62",
     branchName: "מצפה רמון",
-    district: "דרום",
+    district: "South",
     openTime: "10:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -498,7 +498,7 @@ export const pizzaBranches = [
   {
     branchId: "63",
     branchName: "נהריה",
-    district: "צפון",
+    district: "North",
     openTime: "09:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -506,7 +506,7 @@ export const pizzaBranches = [
   {
     branchId: "64",
     branchName: "נס ציונה",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -514,7 +514,7 @@ export const pizzaBranches = [
   {
     branchId: "65",
     branchName: "נצרת",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -522,7 +522,7 @@ export const pizzaBranches = [
   {
     branchId: "66",
     branchName: "נטיבות",
-    district: "דרום",
+    district: "South",
     openTime: "11:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -530,7 +530,7 @@ export const pizzaBranches = [
   {
     branchId: "67",
     branchName: "נתניה - מרכז העיר",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -538,7 +538,7 @@ export const pizzaBranches = [
   {
     branchId: "68",
     branchName: "נתניה - פולג",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -546,7 +546,7 @@ export const pizzaBranches = [
   {
     branchId: "69",
     branchName: "סכנין",
-    district: "צפון",
+    district: "North",
     openTime: "10:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -554,7 +554,7 @@ export const pizzaBranches = [
   {
     branchId: "70",
     branchName: "עכו",
-    district: "צפון",
+    district: "North",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -562,7 +562,7 @@ export const pizzaBranches = [
   {
     branchId: "71",
     branchName: "עפולה",
-    district: "צפון",
+    district: "North",
     openTime: "09:30",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -570,7 +570,7 @@ export const pizzaBranches = [
   {
     branchId: "72",
     branchName: "ערד",
-    district: "דרום",
+    district: "South",
     openTime: "11:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -578,7 +578,7 @@ export const pizzaBranches = [
   {
     branchId: "73",
     branchName: "פארק אדיסון",
-    district: "צפון",
+    district: "North",
     openTime: "09:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -586,7 +586,7 @@ export const pizzaBranches = [
   {
     branchId: "74",
     branchName: "רמת גן - מרום נווה",
-    district: "דן",
+    district: "Dan",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -594,7 +594,7 @@ export const pizzaBranches = [
   {
     branchId: "75",
     branchName: "רמת גן - קניון ביאליק",
-    district: "דן",
+    district: "Dan",
     openTime: "10:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -602,7 +602,7 @@ export const pizzaBranches = [
   {
     branchId: "76",
     branchName: "פרדס חנה",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -610,7 +610,7 @@ export const pizzaBranches = [
   {
     branchId: "77",
     branchName: "פתח תקווה - אם המושבות",
-    district: "דן",
+    district: "Dan",
     openTime: "10:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -618,7 +618,7 @@ export const pizzaBranches = [
   {
     branchId: "78",
     branchName: "פתח תקווה - בלינסון",
-    district: "דן",
+    district: "Dan",
     openTime: "11:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -626,7 +626,7 @@ export const pizzaBranches = [
   {
     branchId: "79",
     branchName: "פתח תקווה כפר - גנים",
-    district: "דן",
+    district: "Dan",
     openTime: "09:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -634,7 +634,7 @@ export const pizzaBranches = [
   {
     branchId: "80",
     branchName: "פתח תקווה - סירקין",
-    district: "דן",
+    district: "Dan",
     openTime: "09:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -642,7 +642,7 @@ export const pizzaBranches = [
   {
     branchId: "81",
     branchName: "קרית מוצקין",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -650,7 +650,7 @@ export const pizzaBranches = [
   {
     branchId: "82",
     branchName: "קרית אתא",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "10:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -658,7 +658,7 @@ export const pizzaBranches = [
   {
     branchId: "83",
     branchName: "קרית גת",
-    district: "דרום",
+    district: "South",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -666,7 +666,7 @@ export const pizzaBranches = [
   {
     branchId: "82",
     branchName: "ירושלים - קרית יובל",
-    district: "מרכז",
+    district: "Center",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -674,7 +674,7 @@ export const pizzaBranches = [
   {
     branchId: "83",
     branchName: "קרית - שמונה",
-    district: "צפון",
+    district: "North",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -682,7 +682,7 @@ export const pizzaBranches = [
   {
     branchId: "84",
     branchName: "ראש העין",
-    district: "דן",
+    district: "Dan",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -690,7 +690,7 @@ export const pizzaBranches = [
   {
     branchId: "85",
     branchName: "ראש פינה",
-    district: "צפון",
+    district: "North",
     openTime: "10:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -698,7 +698,7 @@ export const pizzaBranches = [
   {
     branchId: "86",
     branchName: "ראשון לציון - מזרח",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -706,7 +706,7 @@ export const pizzaBranches = [
   {
     branchId: "87",
     branchName: "ראשון לציון - מערב",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -714,7 +714,7 @@ export const pizzaBranches = [
   {
     branchId: "88",
     branchName: "רהט",
-    district: "דרום",
+    district: "South",
     openTime: "10:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -722,7 +722,7 @@ export const pizzaBranches = [
   {
     branchId: "89",
     branchName: "רחובות",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -730,7 +730,7 @@ export const pizzaBranches = [
   {
     branchId: "90",
     branchName: "רמת השרון",
-    district: "דן",
+    district: "Dan",
     openTime: "10:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -738,7 +738,7 @@ export const pizzaBranches = [
   {
     branchId: "91",
     branchName: "רמלה לוד",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -746,7 +746,7 @@ export const pizzaBranches = [
   {
     branchId: "92",
     branchName: "רמת ישי",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:00",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -754,7 +754,7 @@ export const pizzaBranches = [
   {
     branchId: "93",
     branchName: "רעננה",
-    district: "מרכז",
+    district: "Center",
     openTime: "10:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -762,7 +762,7 @@ export const pizzaBranches = [
   {
     branchId: "94",
     branchName: "שדרות",
-    district: "דרום",
+    district: "South",
     openTime: "09:30",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -770,7 +770,7 @@ export const pizzaBranches = [
   {
     branchId: "95",
     branchName: "שוהם",
-    district: "מרכז",
+    district: "Center",
     openTime: "11:00",
     closeTime: "23:00",
     branchOpen: "Open",
@@ -778,7 +778,7 @@ export const pizzaBranches = [
   {
     branchId: "96",
     branchName: "שפרעם - קניון האחים סמרה",
-    district: "חיפה",
+    district: "Haifa",
     openTime: "09:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -786,7 +786,7 @@ export const pizzaBranches = [
   {
     branchId: "97",
     branchName: "תל אביב - יד אליהו",
-    district: "דן",
+    district: "Dan",
     openTime: "10:00",
     closeTime: "22:00",
     branchOpen: "Open",
@@ -794,7 +794,7 @@ export const pizzaBranches = [
   {
     branchId: "98",
     branchName: "תל אביב - רמת החייל",
-    district: "דן",
+    district: "Dan",
     openTime: "09:00",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -802,7 +802,7 @@ export const pizzaBranches = [
   {
     branchId: "99",
     branchName: "תל אביב - חשמונאים",
-    district: "דן",
+    district: "Dan",
     openTime: "09:30",
     closeTime: "23:30",
     branchOpen: "Open",
@@ -810,7 +810,7 @@ export const pizzaBranches = [
   {
     branchId: "100",
     branchName: "תל אביב - רמת אביב",
-    district: "דן",
+    district: "Dan",
     openTime: "09:30",
     closeTime: "22:30",
     branchOpen: "Open",
@@ -922,4 +922,15 @@ export const pizzaMapId = {
   "תל אביב - רמת אביב": "100",
 };
 
-export const pizzaToppings = ["onion", "olives", "tomato", "corn", "mushrooms"];
+export const pizzaToppings = [
+  "Onions",
+  "Olives",
+  "Tomato",
+  "Corn",
+  "Mushrooms",
+  "Extra cheese",
+  "Pineapple",
+  "Papproni",
+  "Jalapinios",
+  "Hot pepper",
+];
